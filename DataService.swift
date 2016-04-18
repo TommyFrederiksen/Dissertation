@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-let URL_BASE = "https://figofydev.firebaseio.com"
+let URL_BASE = "https://figofydatabase.firebaseio.com"
 
 class DataService {
     static let dataService = DataService()
