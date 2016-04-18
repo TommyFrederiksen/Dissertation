@@ -70,7 +70,7 @@ class ClockVC: UIViewController {
             }
             
         } else {
-            countdownLabel.text = ""
+            countdownLabel.text = "00:00:00"
         }
         
     }
