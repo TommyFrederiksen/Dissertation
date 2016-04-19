@@ -1,0 +1,916 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		171DC17FDCFBEE728D67FE26 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3D4BDC1C3533F8ED3B5DA2 /* Pods.framework */; };
+		181E55751C7DABE7007E9EF3 /* FigofySea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E55741C7DABE7007E9EF3 /* FigofySea.swift */; };
+		181E55771C7DDCFD007E9EF3 /* FigofyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E55761C7DDCFD007E9EF3 /* FigofyUser.swift */; };
+		183B64C01C58DD7100B78D1B /* System San Francisco Display Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 183B64BE1C58DD7100B78D1B /* System San Francisco Display Bold.ttf */; };
+		183B64C11C58DD7100B78D1B /* System San Francisco Display Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 183B64BF1C58DD7100B78D1B /* System San Francisco Display Regular.ttf */; };
+		183B64C51C58F58C00B78D1B /* GradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B64C41C58F58C00B78D1B /* GradientColor.swift */; };
+		184696CA1C5F61710095D64B /* SeaAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184696C91C5F61710095D64B /* SeaAnnotation.swift */; };
+		184696F01C5F9A000095D64B /* CustomFigofyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184696EF1C5F9A000095D64B /* CustomFigofyAnnotation.swift */; };
+		184698461C60A34B0095D64B /* Figofy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 184698441C60A34B0095D64B /* Figofy.xcdatamodeld */; };
+		1846984C1C60BE8E0095D64B /* SeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846984B1C60BE8E0095D64B /* SeaCell.swift */; };
+		1846984F1C60C0E50095D64B /* SeaListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1846984E1C60C0E50095D64B /* SeaListVC.swift */; };
+		187278F01C6B64360029D33F /* libMobilePayManager1.7.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187278EF1C6B64360029D33F /* libMobilePayManager1.7.0.a */; settings = {ATTRIBUTES = (Weak, ); }; };
+		187625DD1C60EC75003828DD /* ListOfSeas.csv in Resources */ = {isa = PBXBuildFile; fileRef = 187625DC1C60EC75003828DD /* ListOfSeas.csv */; };
+		187625E61C60F251003828DD /* Sea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187625E41C60F251003828DD /* Sea.swift */; };
+		187625E71C60F251003828DD /* Sea+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187625E51C60F251003828DD /* Sea+CoreDataProperties.swift */; };
+		187625E91C60F440003828DD /* menudata.csv in Resources */ = {isa = PBXBuildFile; fileRef = 187625E81C60F440003828DD /* menudata.csv */; };
+		18869D191CA133C200635951 /* NSTimeIntervalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18869D181CA133C200635951 /* NSTimeIntervalExtensions.swift */; };
+		18869D1B1CA13C8300635951 /* MPPayment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18869D1A1CA13C8300635951 /* MPPayment.swift */; };
+		188D09C01C92E4970021FBC8 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188D09BF1C92E4970021FBC8 /* NSDateExtensions.swift */; };
+		189DE0CC1C86E89A00EA2977 /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DE0CB1C86E89A00EA2977 /* Fish.swift */; };
+		189DE0CE1C86FA1400EA2977 /* FishCatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DE0CD1C86FA1400EA2977 /* FishCatch.swift */; };
+		189E3CFC1C7BC05100AFE975 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E3CFB1C7BC05100AFE975 /* Constants.swift */; };
+		189E3CFE1C7BDE4900AFE975 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189E3CFD1C7BDE4900AFE975 /* FBSDKShareKit.framework */; };
+		18A2765E1C5A165E0071E4AA /* FigofyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2765D1C5A165E0071E4AA /* FigofyButton.swift */; };
+		18ACE6411C7BA9DF0092BC95 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ACE63E1C7BA9DF0092BC95 /* Bolts.framework */; };
+		18ACE6421C7BA9DF0092BC95 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ACE63F1C7BA9DF0092BC95 /* FBSDKCoreKit.framework */; };
+		18ACE6431C7BA9DF0092BC95 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ACE6401C7BA9DF0092BC95 /* FBSDKLoginKit.framework */; };
+		18ACE6451C7BBDAE0092BC95 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ACE6441C7BBDAE0092BC95 /* DataService.swift */; };
+		18AFDA031C7472C300F2616E /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFDA021C7472C300F2616E /* AlertView.swift */; };
+		18CCAA981C60D5B700C7D5E8 /* CreateSeaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCAA961C60D5B700C7D5E8 /* CreateSeaVC.swift */; };
+		18CCAA991C60D5B700C7D5E8 /* CreateSeaVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCAA971C60D5B700C7D5E8 /* CreateSeaVC.xib */; };
+		18E642B01C80A87F00155CCC /* RegisterFishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E642AF1C80A87F00155CCC /* RegisterFishVC.swift */; };
+		18E675801C58B6850046B259 /* TextFieldDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6757F1C58B6850046B259 /* TextFieldDesign.swift */; };
+		18E675821C58B76F0046B259 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E675811C58B76F0046B259 /* TextFieldEffects.swift */; };
+		18E675841C58C2E30046B259 /* System San Francisco Display Ultralight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E675831C58C2E30046B259 /* System San Francisco Display Ultralight.ttf */; };
+		18E675861C58C3340046B259 /* System San Francisco Display Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18E675851C58C3340046B259 /* System San Francisco Display Thin.ttf */; };
+		651018131C50D93100B7FECC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018121C50D93100B7FECC /* ProfileViewController.swift */; };
+		651018151C50D9EB00B7FECC /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018141C50D9EB00B7FECC /* MapVC.swift */; };
+		651018171C50DB4C00B7FECC /* LakeInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018161C50DB4C00B7FECC /* LakeInformationVC.swift */; };
+		651018191C50DBDC00B7FECC /* MobilePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018181C50DBDC00B7FECC /* MobilePayViewController.swift */; };
+		654A27101C350EA6008AA4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A270F1C350EA6008AA4EB /* AppDelegate.swift */; };
+		654A27121C350EA6008AA4EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A27111C350EA6008AA4EB /* LoginViewController.swift */; };
+		654A27151C350EA6008AA4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A27131C350EA6008AA4EB /* Main.storyboard */; };
+		654A27171C350EA6008AA4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654A27161C350EA6008AA4EB /* Assets.xcassets */; };
+		654A271A1C350EA6008AA4EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A27181C350EA6008AA4EB /* LaunchScreen.storyboard */; };
+		654A27251C350EA7008AA4EB /* FigofyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A27241C350EA7008AA4EB /* FigofyTests.swift */; };
+		654A27301C350EA7008AA4EB /* FigofyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A272F1C350EA7008AA4EB /* FigofyUITests.swift */; };
+		655044C91C636F7700D79B89 /* EventTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655044C81C636F7700D79B89 /* EventTableVC.swift */; };
+		655044CB1C637C2900D79B89 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655044CA1C637C2900D79B89 /* Event.swift */; };
+		655044CD1C64CF1100D79B89 /* ClockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655044CC1C64CF1100D79B89 /* ClockVC.swift */; };
+		655044CF1C64D24700D79B89 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655044CE1C64D24700D79B89 /* Clock.swift */; };
+		6550AD4C1C9C30380020A415 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6550AD4B1C9C30380020A415 /* LogCell.swift */; };
+		657368CE1C635E3900E1367D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657368CD1C635E3900E1367D /* EventTableViewCell.swift */; };
+		659501001C6DD94C0067ED1A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659500FF1C6DD94C0067ED1A /* Timer.swift */; };
+		65C8DFBC1C80434F0088622A /* FavoriteSeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C8DFBB1C80434F0088622A /* FavoriteSeaCell.swift */; };
+		65D98CE81C8EC0AF00D54BB9 /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CE71C8EC0AF00D54BB9 /* LogVC.swift */; };
+		65D98CEA1C8ED25700D54BB9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CE91C8ED25700D54BB9 /* FeedCell.swift */; };
+		65D98CEC1C9023A900D54BB9 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CEB1C9023A900D54BB9 /* FriendsCell.swift */; };
+		65D98CEE1C9023E300D54BB9 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CED1C9023E300D54BB9 /* FriendsVC.swift */; };
+		F98634459CF7905C5013FABE /* Pods in Frameworks */ = {isa = PBXBuildFile; fileRef = B10CAFE5CCEBA3FE110E428F /* Pods */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		654A27211C350EA7008AA4EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 654A27041C350EA6008AA4EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 654A270B1C350EA6008AA4EB;
+			remoteInfo = Figofy;
+		};
+		654A272C1C350EA7008AA4EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 654A27041C350EA6008AA4EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 654A270B1C350EA6008AA4EB;
+			remoteInfo = Figofy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		181E55741C7DABE7007E9EF3 /* FigofySea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigofySea.swift; sourceTree = "<group>"; };
+		181E55761C7DDCFD007E9EF3 /* FigofyUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigofyUser.swift; sourceTree = "<group>"; };
+		183B64BE1C58DD7100B78D1B /* System San Francisco Display Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "System San Francisco Display Bold.ttf"; sourceTree = "<group>"; };
+		183B64BF1C58DD7100B78D1B /* System San Francisco Display Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "System San Francisco Display Regular.ttf"; sourceTree = "<group>"; };
+		183B64C41C58F58C00B78D1B /* GradientColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientColor.swift; sourceTree = "<group>"; };
+		184696C91C5F61710095D64B /* SeaAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaAnnotation.swift; sourceTree = "<group>"; };
+		184696EF1C5F9A000095D64B /* CustomFigofyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFigofyAnnotation.swift; sourceTree = "<group>"; };
+		184698451C60A34B0095D64B /* Figofy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Figofy.xcdatamodel; sourceTree = "<group>"; };
+		1846984B1C60BE8E0095D64B /* SeaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaCell.swift; sourceTree = "<group>"; };
+		1846984E1C60C0E50095D64B /* SeaListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeaListVC.swift; sourceTree = "<group>"; };
+		187278EC1C6B3FA80029D33F /* Figofy-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Figofy-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		187278EF1C6B64360029D33F /* libMobilePayManager1.7.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMobilePayManager1.7.0.a; path = "Pods/MobilePay-AppSwitch-SDK/sdk/iOS/1.7.0/MobilePayManager/libMobilePayManager1.7.0.a"; sourceTree = "<group>"; };
+		187625DC1C60EC75003828DD /* ListOfSeas.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ListOfSeas.csv; sourceTree = "<group>"; };
+		187625E41C60F251003828DD /* Sea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sea.swift; sourceTree = "<group>"; };
+		187625E51C60F251003828DD /* Sea+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sea+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		187625E81C60F440003828DD /* menudata.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menudata.csv; sourceTree = "<group>"; };
+		18869D181CA133C200635951 /* NSTimeIntervalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSTimeIntervalExtensions.swift; sourceTree = "<group>"; };
+		18869D1A1CA13C8300635951 /* MPPayment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPPayment.swift; sourceTree = "<group>"; };
+		188D09BF1C92E4970021FBC8 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
+		189DE0CB1C86E89A00EA2977 /* Fish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
+		189DE0CD1C86FA1400EA2977 /* FishCatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FishCatch.swift; sourceTree = "<group>"; };
+		189E3CFB1C7BC05100AFE975 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		189E3CFD1C7BDE4900AFE975 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		18A2765D1C5A165E0071E4AA /* FigofyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FigofyButton.swift; sourceTree = "<group>"; };
+		18ACE63E1C7BA9DF0092BC95 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		18ACE63F1C7BA9DF0092BC95 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		18ACE6401C7BA9DF0092BC95 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		18ACE6441C7BBDAE0092BC95 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		18AFDA021C7472C300F2616E /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		18CCAA961C60D5B700C7D5E8 /* CreateSeaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateSeaVC.swift; sourceTree = "<group>"; };
+		18CCAA971C60D5B700C7D5E8 /* CreateSeaVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateSeaVC.xib; sourceTree = "<group>"; };
+		18E642AF1C80A87F00155CCC /* RegisterFishVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFishVC.swift; sourceTree = "<group>"; };
+		18E6757F1C58B6850046B259 /* TextFieldDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDesign.swift; sourceTree = "<group>"; };
+		18E675811C58B76F0046B259 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		18E675831C58C2E30046B259 /* System San Francisco Display Ultralight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "System San Francisco Display Ultralight.ttf"; sourceTree = "<group>"; };
+		18E675851C58C3340046B259 /* System San Francisco Display Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "System San Francisco Display Thin.ttf"; sourceTree = "<group>"; };
+		2B956FA0C05CC4AF882EF6F7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		651018121C50D93100B7FECC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		651018141C50D9EB00B7FECC /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		651018161C50DB4C00B7FECC /* LakeInformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LakeInformationVC.swift; sourceTree = "<group>"; };
+		651018181C50DBDC00B7FECC /* MobilePayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePayViewController.swift; sourceTree = "<group>"; };
+		654A270C1C350EA6008AA4EB /* Figofy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Figofy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		654A270F1C350EA6008AA4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		654A27111C350EA6008AA4EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		654A27141C350EA6008AA4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		654A27161C350EA6008AA4EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		654A27191C350EA6008AA4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		654A271B1C350EA6008AA4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654A27201C350EA7008AA4EB /* FigofyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigofyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		654A27241C350EA7008AA4EB /* FigofyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigofyTests.swift; sourceTree = "<group>"; };
+		654A27261C350EA7008AA4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654A272B1C350EA7008AA4EB /* FigofyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigofyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		654A272F1C350EA7008AA4EB /* FigofyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigofyUITests.swift; sourceTree = "<group>"; };
+		654A27311C350EA7008AA4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655044C81C636F7700D79B89 /* EventTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableVC.swift; sourceTree = "<group>"; };
+		655044CA1C637C2900D79B89 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		655044CC1C64CF1100D79B89 /* ClockVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockVC.swift; sourceTree = "<group>"; };
+		655044CE1C64D24700D79B89 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		6550AD4B1C9C30380020A415 /* LogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
+		657368CD1C635E3900E1367D /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewCell.swift; path = ../EventTableViewCell.swift; sourceTree = "<group>"; };
+		659500FF1C6DD94C0067ED1A /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		65C8DFBB1C80434F0088622A /* FavoriteSeaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteSeaCell.swift; sourceTree = "<group>"; };
+		65D98CE71C8EC0AF00D54BB9 /* LogVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
+		65D98CE91C8ED25700D54BB9 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		65D98CEB1C9023A900D54BB9 /* FriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
+		65D98CED1C9023E300D54BB9 /* FriendsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
+		6B3D4BDC1C3533F8ED3B5DA2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10CAFE5CCEBA3FE110E428F /* Pods */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods; path = ../../../Pods; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D388C7DAA3D5DB5B97783B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		654A27091C350EA6008AA4EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18ACE6411C7BA9DF0092BC95 /* Bolts.framework in Frameworks */,
+				18ACE6421C7BA9DF0092BC95 /* FBSDKCoreKit.framework in Frameworks */,
+				18ACE6431C7BA9DF0092BC95 /* FBSDKLoginKit.framework in Frameworks */,
+				189E3CFE1C7BDE4900AFE975 /* FBSDKShareKit.framework in Frameworks */,
+				F98634459CF7905C5013FABE /* Pods in Frameworks */,
+				187278F01C6B64360029D33F /* libMobilePayManager1.7.0.a in Frameworks */,
+				171DC17FDCFBEE728D67FE26 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A271D1C350EA7008AA4EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A27281C350EA7008AA4EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		181E55731C7DABBF007E9EF3 /* SpecificCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				187625E41C60F251003828DD /* Sea.swift */,
+				187625E51C60F251003828DD /* Sea+CoreDataProperties.swift */,
+			);
+			name = SpecificCoreData;
+			sourceTree = "<group>";
+		};
+		183B64C21C58DDA300B78D1B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				18E675851C58C3340046B259 /* System San Francisco Display Thin.ttf */,
+				18E675831C58C2E30046B259 /* System San Francisco Display Ultralight.ttf */,
+				183B64BE1C58DD7100B78D1B /* System San Francisco Display Bold.ttf */,
+				183B64BF1C58DD7100B78D1B /* System San Francisco Display Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		183B64C31C58F55700B78D1B /* DesignUIColors */ = {
+			isa = PBXGroup;
+			children = (
+				18E6757F1C58B6850046B259 /* TextFieldDesign.swift */,
+				18E675811C58B76F0046B259 /* TextFieldEffects.swift */,
+				183B64C41C58F58C00B78D1B /* GradientColor.swift */,
+				18A2765D1C5A165E0071E4AA /* FigofyButton.swift */,
+			);
+			name = DesignUIColors;
+			sourceTree = "<group>";
+		};
+		184696C51C5F4A450095D64B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				657368CD1C635E3900E1367D /* EventTableViewCell.swift */,
+				18CCAA961C60D5B700C7D5E8 /* CreateSeaVC.swift */,
+				651018161C50DB4C00B7FECC /* LakeInformationVC.swift */,
+				654A27111C350EA6008AA4EB /* LoginViewController.swift */,
+				651018141C50D9EB00B7FECC /* MapVC.swift */,
+				651018181C50DBDC00B7FECC /* MobilePayViewController.swift */,
+				651018121C50D93100B7FECC /* ProfileViewController.swift */,
+				1846984E1C60C0E50095D64B /* SeaListVC.swift */,
+				655044C81C636F7700D79B89 /* EventTableVC.swift */,
+				655044CC1C64CF1100D79B89 /* ClockVC.swift */,
+				18E642AF1C80A87F00155CCC /* RegisterFishVC.swift */,
+				65D98CE71C8EC0AF00D54BB9 /* LogVC.swift */,
+				65D98CED1C9023E300D54BB9 /* FriendsVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		184696C61C5F60CB0095D64B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				181E55731C7DABBF007E9EF3 /* SpecificCoreData */,
+				184696C91C5F61710095D64B /* SeaAnnotation.swift */,
+				655044CA1C637C2900D79B89 /* Event.swift */,
+				655044CE1C64D24700D79B89 /* Clock.swift */,
+				659500FF1C6DD94C0067ED1A /* Timer.swift */,
+				181E55741C7DABE7007E9EF3 /* FigofySea.swift */,
+				181E55761C7DDCFD007E9EF3 /* FigofyUser.swift */,
+				65C8DFBB1C80434F0088622A /* FavoriteSeaCell.swift */,
+				189DE0CB1C86E89A00EA2977 /* Fish.swift */,
+				189DE0CD1C86FA1400EA2977 /* FishCatch.swift */,
+				65D98CEB1C9023A900D54BB9 /* FriendsCell.swift */,
+				18869D1A1CA13C8300635951 /* MPPayment.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1846984D1C60BE920095D64B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65D98CE91C8ED25700D54BB9 /* FeedCell.swift */,
+				184696EF1C5F9A000095D64B /* CustomFigofyAnnotation.swift */,
+				1846984B1C60BE8E0095D64B /* SeaCell.swift */,
+				18CCAA971C60D5B700C7D5E8 /* CreateSeaVC.xib */,
+				18AFDA021C7472C300F2616E /* AlertView.swift */,
+				6550AD4B1C9C30380020A415 /* LogCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		189E3CFA1C7BC03F00AFE975 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				189E3CFB1C7BC05100AFE975 /* Constants.swift */,
+				188D09BF1C92E4970021FBC8 /* NSDateExtensions.swift */,
+				18869D181CA133C200635951 /* NSTimeIntervalExtensions.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		18ACE6461C7BBDB10092BC95 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				18ACE6441C7BBDAE0092BC95 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		436D3628BF46749D6376F570 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B956FA0C05CC4AF882EF6F7 /* Pods.debug.xcconfig */,
+				F3D388C7DAA3D5DB5B97783B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		654A27031C350EA6008AA4EB = {
+			isa = PBXGroup;
+			children = (
+				654A270E1C350EA6008AA4EB /* Figofy */,
+				654A27231C350EA7008AA4EB /* FigofyTests */,
+				654A272E1C350EA7008AA4EB /* FigofyUITests */,
+				654A270D1C350EA6008AA4EB /* Products */,
+				436D3628BF46749D6376F570 /* Pods */,
+				9B8569D1672C1A77B7280598 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		654A270D1C350EA6008AA4EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				654A270C1C350EA6008AA4EB /* Figofy.app */,
+				654A27201C350EA7008AA4EB /* FigofyTests.xctest */,
+				654A272B1C350EA7008AA4EB /* FigofyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		654A270E1C350EA6008AA4EB /* Figofy */ = {
+			isa = PBXGroup;
+			children = (
+				18ACE6461C7BBDB10092BC95 /* Services */,
+				189E3CFA1C7BC03F00AFE975 /* Util */,
+				184696C61C5F60CB0095D64B /* Model */,
+				1846984D1C60BE920095D64B /* View */,
+				184696C51C5F4A450095D64B /* Controller */,
+				183B64C31C58F55700B78D1B /* DesignUIColors */,
+				183B64C21C58DDA300B78D1B /* Fonts */,
+				654A270F1C350EA6008AA4EB /* AppDelegate.swift */,
+				654A27131C350EA6008AA4EB /* Main.storyboard */,
+				654A27161C350EA6008AA4EB /* Assets.xcassets */,
+				654A27181C350EA6008AA4EB /* LaunchScreen.storyboard */,
+				654A271B1C350EA6008AA4EB /* Info.plist */,
+				184698441C60A34B0095D64B /* Figofy.xcdatamodeld */,
+				187625DC1C60EC75003828DD /* ListOfSeas.csv */,
+				187625E81C60F440003828DD /* menudata.csv */,
+				187278EC1C6B3FA80029D33F /* Figofy-Bridging-Header.h */,
+			);
+			path = Figofy;
+			sourceTree = "<group>";
+		};
+		654A27231C350EA7008AA4EB /* FigofyTests */ = {
+			isa = PBXGroup;
+			children = (
+				654A27241C350EA7008AA4EB /* FigofyTests.swift */,
+				654A27261C350EA7008AA4EB /* Info.plist */,
+			);
+			path = FigofyTests;
+			sourceTree = "<group>";
+		};
+		654A272E1C350EA7008AA4EB /* FigofyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				654A272F1C350EA7008AA4EB /* FigofyUITests.swift */,
+				654A27311C350EA7008AA4EB /* Info.plist */,
+			);
+			path = FigofyUITests;
+			sourceTree = "<group>";
+		};
+		9B8569D1672C1A77B7280598 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				189E3CFD1C7BDE4900AFE975 /* FBSDKShareKit.framework */,
+				18ACE63E1C7BA9DF0092BC95 /* Bolts.framework */,
+				18ACE63F1C7BA9DF0092BC95 /* FBSDKCoreKit.framework */,
+				18ACE6401C7BA9DF0092BC95 /* FBSDKLoginKit.framework */,
+				187278EF1C6B64360029D33F /* libMobilePayManager1.7.0.a */,
+				B10CAFE5CCEBA3FE110E428F /* Pods */,
+				6B3D4BDC1C3533F8ED3B5DA2 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		654A270B1C350EA6008AA4EB /* Figofy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654A27341C350EA7008AA4EB /* Build configuration list for PBXNativeTarget "Figofy" */;
+			buildPhases = (
+				BFFC81835F9EBD2420E736BB /* Check Pods Manifest.lock */,
+				654A27081C350EA6008AA4EB /* Sources */,
+				654A27091C350EA6008AA4EB /* Frameworks */,
+				654A270A1C350EA6008AA4EB /* Resources */,
+				97AFE9CA675BB0C849CCA806 /* Embed Pods Frameworks */,
+				6FE51FE91EAE58E18B76D6B9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Figofy;
+			productName = Figofy;
+			productReference = 654A270C1C350EA6008AA4EB /* Figofy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		654A271F1C350EA7008AA4EB /* FigofyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654A27371C350EA7008AA4EB /* Build configuration list for PBXNativeTarget "FigofyTests" */;
+			buildPhases = (
+				654A271C1C350EA7008AA4EB /* Sources */,
+				654A271D1C350EA7008AA4EB /* Frameworks */,
+				654A271E1C350EA7008AA4EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				654A27221C350EA7008AA4EB /* PBXTargetDependency */,
+			);
+			name = FigofyTests;
+			productName = FigofyTests;
+			productReference = 654A27201C350EA7008AA4EB /* FigofyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		654A272A1C350EA7008AA4EB /* FigofyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 654A273A1C350EA7008AA4EB /* Build configuration list for PBXNativeTarget "FigofyUITests" */;
+			buildPhases = (
+				654A27271C350EA7008AA4EB /* Sources */,
+				654A27281C350EA7008AA4EB /* Frameworks */,
+				654A27291C350EA7008AA4EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				654A272D1C350EA7008AA4EB /* PBXTargetDependency */,
+			);
+			name = FigofyUITests;
+			productName = FigofyUITests;
+			productReference = 654A272B1C350EA7008AA4EB /* FigofyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		654A27041C350EA6008AA4EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Tommy;
+				TargetAttributes = {
+					654A270B1C350EA6008AA4EB = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = KGH9V264AH;
+					};
+					654A271F1C350EA7008AA4EB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 654A270B1C350EA6008AA4EB;
+					};
+					654A272A1C350EA7008AA4EB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 654A270B1C350EA6008AA4EB;
+					};
+				};
+			};
+			buildConfigurationList = 654A27071C350EA6008AA4EB /* Build configuration list for PBXProject "Figofy" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 654A27031C350EA6008AA4EB;
+			productRefGroup = 654A270D1C350EA6008AA4EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				654A270B1C350EA6008AA4EB /* Figofy */,
+				654A271F1C350EA7008AA4EB /* FigofyTests */,
+				654A272A1C350EA7008AA4EB /* FigofyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		654A270A1C350EA6008AA4EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E675841C58C2E30046B259 /* System San Francisco Display Ultralight.ttf in Resources */,
+				187625E91C60F440003828DD /* menudata.csv in Resources */,
+				654A271A1C350EA6008AA4EB /* LaunchScreen.storyboard in Resources */,
+				183B64C11C58DD7100B78D1B /* System San Francisco Display Regular.ttf in Resources */,
+				654A27171C350EA6008AA4EB /* Assets.xcassets in Resources */,
+				18E675861C58C3340046B259 /* System San Francisco Display Thin.ttf in Resources */,
+				654A27151C350EA6008AA4EB /* Main.storyboard in Resources */,
+				18CCAA991C60D5B700C7D5E8 /* CreateSeaVC.xib in Resources */,
+				183B64C01C58DD7100B78D1B /* System San Francisco Display Bold.ttf in Resources */,
+				187625DD1C60EC75003828DD /* ListOfSeas.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A271E1C350EA7008AA4EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A27291C350EA7008AA4EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FE51FE91EAE58E18B76D6B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97AFE9CA675BB0C849CCA806 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFFC81835F9EBD2420E736BB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		654A27081C350EA6008AA4EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				655044CD1C64CF1100D79B89 /* ClockVC.swift in Sources */,
+				18869D1B1CA13C8300635951 /* MPPayment.swift in Sources */,
+				18AFDA031C7472C300F2616E /* AlertView.swift in Sources */,
+				65D98CE81C8EC0AF00D54BB9 /* LogVC.swift in Sources */,
+				651018171C50DB4C00B7FECC /* LakeInformationVC.swift in Sources */,
+				651018131C50D93100B7FECC /* ProfileViewController.swift in Sources */,
+				184696CA1C5F61710095D64B /* SeaAnnotation.swift in Sources */,
+				65D98CEA1C8ED25700D54BB9 /* FeedCell.swift in Sources */,
+				181E55751C7DABE7007E9EF3 /* FigofySea.swift in Sources */,
+				18869D191CA133C200635951 /* NSTimeIntervalExtensions.swift in Sources */,
+				655044C91C636F7700D79B89 /* EventTableVC.swift in Sources */,
+				189DE0CC1C86E89A00EA2977 /* Fish.swift in Sources */,
+				6550AD4C1C9C30380020A415 /* LogCell.swift in Sources */,
+				654A27121C350EA6008AA4EB /* LoginViewController.swift in Sources */,
+				65C8DFBC1C80434F0088622A /* FavoriteSeaCell.swift in Sources */,
+				181E55771C7DDCFD007E9EF3 /* FigofyUser.swift in Sources */,
+				184696F01C5F9A000095D64B /* CustomFigofyAnnotation.swift in Sources */,
+				184698461C60A34B0095D64B /* Figofy.xcdatamodeld in Sources */,
+				654A27101C350EA6008AA4EB /* AppDelegate.swift in Sources */,
+				18E675821C58B76F0046B259 /* TextFieldEffects.swift in Sources */,
+				188D09C01C92E4970021FBC8 /* NSDateExtensions.swift in Sources */,
+				189E3CFC1C7BC05100AFE975 /* Constants.swift in Sources */,
+				657368CE1C635E3900E1367D /* EventTableViewCell.swift in Sources */,
+				187625E71C60F251003828DD /* Sea+CoreDataProperties.swift in Sources */,
+				65D98CEE1C9023E300D54BB9 /* FriendsVC.swift in Sources */,
+				18CCAA981C60D5B700C7D5E8 /* CreateSeaVC.swift in Sources */,
+				18ACE6451C7BBDAE0092BC95 /* DataService.swift in Sources */,
+				655044CB1C637C2900D79B89 /* Event.swift in Sources */,
+				18E675801C58B6850046B259 /* TextFieldDesign.swift in Sources */,
+				659501001C6DD94C0067ED1A /* Timer.swift in Sources */,
+				18E642B01C80A87F00155CCC /* RegisterFishVC.swift in Sources */,
+				189DE0CE1C86FA1400EA2977 /* FishCatch.swift in Sources */,
+				65D98CEC1C9023A900D54BB9 /* FriendsCell.swift in Sources */,
+				183B64C51C58F58C00B78D1B /* GradientColor.swift in Sources */,
+				1846984F1C60C0E50095D64B /* SeaListVC.swift in Sources */,
+				655044CF1C64D24700D79B89 /* Clock.swift in Sources */,
+				1846984C1C60BE8E0095D64B /* SeaCell.swift in Sources */,
+				651018191C50DBDC00B7FECC /* MobilePayViewController.swift in Sources */,
+				651018151C50D9EB00B7FECC /* MapVC.swift in Sources */,
+				18A2765E1C5A165E0071E4AA /* FigofyButton.swift in Sources */,
+				187625E61C60F251003828DD /* Sea.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A271C1C350EA7008AA4EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654A27251C350EA7008AA4EB /* FigofyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654A27271C350EA7008AA4EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				654A27301C350EA7008AA4EB /* FigofyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		654A27221C350EA7008AA4EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 654A270B1C350EA6008AA4EB /* Figofy */;
+			targetProxy = 654A27211C350EA7008AA4EB /* PBXContainerItemProxy */;
+		};
+		654A272D1C350EA7008AA4EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 654A270B1C350EA6008AA4EB /* Figofy */;
+			targetProxy = 654A272C1C350EA7008AA4EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		654A27131C350EA6008AA4EB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654A27141C350EA6008AA4EB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		654A27181C350EA6008AA4EB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				654A27191C350EA6008AA4EB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		654A27321C350EA7008AA4EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$PROJECT_DIR/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MJPS/Desktop/Figofy/Figofy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		654A27331C350EA7008AA4EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$PROJECT_DIR/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/MJPS/Desktop/Figofy/Figofy-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		654A27351C350EA7008AA4EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B956FA0C05CC4AF882EF6F7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Figofy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/MobilePay-AppSwitch-SDK/sdk/iOS/1.7.0/MobilePayManager",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = figofy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Figofy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		654A27361C350EA7008AA4EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3D388C7DAA3D5DB5B97783B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = Figofy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/MobilePay-AppSwitch-SDK/sdk/iOS/1.7.0/MobilePayManager",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = figofy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/Figofy-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		654A27381C350EA7008AA4EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FigofyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tommy.FigofyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Figofy.app/Figofy";
+			};
+			name = Debug;
+		};
+		654A27391C350EA7008AA4EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FigofyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tommy.FigofyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Figofy.app/Figofy";
+			};
+			name = Release;
+		};
+		654A273B1C350EA7008AA4EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FigofyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tommy.FigofyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Figofy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		654A273C1C350EA7008AA4EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FigofyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tommy.FigofyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Figofy;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		654A27071C350EA6008AA4EB /* Build configuration list for PBXProject "Figofy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654A27321C350EA7008AA4EB /* Debug */,
+				654A27331C350EA7008AA4EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		654A27341C350EA7008AA4EB /* Build configuration list for PBXNativeTarget "Figofy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654A27351C350EA7008AA4EB /* Debug */,
+				654A27361C350EA7008AA4EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		654A27371C350EA7008AA4EB /* Build configuration list for PBXNativeTarget "FigofyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654A27381C350EA7008AA4EB /* Debug */,
+				654A27391C350EA7008AA4EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		654A273A1C350EA7008AA4EB /* Build configuration list for PBXNativeTarget "FigofyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				654A273B1C350EA7008AA4EB /* Debug */,
+				654A273C1C350EA7008AA4EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		184698441C60A34B0095D64B /* Figofy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				184698451C60A34B0095D64B /* Figofy.xcdatamodel */,
+			);
+			currentVersion = 184698451C60A34B0095D64B /* Figofy.xcdatamodel */;
+			path = Figofy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 654A27041C350EA6008AA4EB /* Project object */;
+}

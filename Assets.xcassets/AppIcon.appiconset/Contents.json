@@ -21,9 +21,14 @@
       "scale" : "3x"
     },
     {
+<<<<<<< HEAD
       "size" : "60x60",
       "idiom" : "iphone",
       "filename" : "appicon.png",
+=======
+      "idiom" : "iphone",
+      "size" : "60x60",
+>>>>>>> origin/master
       "scale" : "2x"
     },
     {

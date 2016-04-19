@@ -1,4 +1,8 @@
 //
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 //  File.swift
 //  Figofy
 //
@@ -35,3 +39,21 @@ class OverviewViewController : UICollectionViewController{
      //
     //}
 }
+<<<<<<< HEAD
+=======
+=======
+//  OverviewViewController.swift
+//  Figofy
+//
+//  Created by Tommy on 12/01/2016.
+//  Copyright © 2016 Tommy. All rights reserved.
+//
+
+import UIkit
+
+class OverviewViewController: UInt  {
+    <#properties and methods#>
+}
+
+>>>>>>> 9d0f35c333266b6bfd47f3014687ce43dbd0df7d
+>>>>>>> origin/master
