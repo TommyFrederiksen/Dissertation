@@ -25,5 +25,6 @@ class Event
         _photo = photo
         
     }
+    //eow hunndi
     
 }
