@@ -1837,7 +1837,7 @@
                                     <action selector="payBtnPressed:" destination="VWp-wP-qoj" eventType="touchUpInside" id="ru2-Mu-HSv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p7p-TC-1wJ" customClass="TextFieldDesign" customModule="Figofy" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p7p-TC-1wJ" customClass="TextFieldDesign" customModule="Figofy" customModuleProvider="target">
                                 <rect key="frame" x="135" y="185" width="330" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="5qg-xD-txV"/>

@@ -234,7 +234,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if let profileView = tabBarController.viewControllers![0] as? ProfileViewController {
                 if let user = sender as? FigofyUser {
                     profileView.user = user
-                    
+                                        
                 }
             }
         }

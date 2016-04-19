@@ -19,6 +19,7 @@ class DataService {
     private var _REF_SEAS = Firebase(url: "\(URL_BASE)/seas")
     private var _REF_USERS = Firebase(url: "\(URL_BASE)/users")
     private var _REF_FISH = Firebase(url: "\(URL_BASE)/fish")
+    private var _REF_PAYMENT_REGISTER = Firebase(url: "\(URL_BASE)/payment")
     private var _CURRENT_TIMESTAMP = FirebaseServerValue.timestamp()
     
     // MARK: Properties
@@ -32,6 +33,10 @@ class DataService {
     
     var REF_USERS: Firebase {
         return _REF_USERS
+    }
+    
+    var REF_PAYMENT_REGISTER: Firebase{
+        return _REF_PAYMENT_REGISTER
     }
     
     var REF_USER_CURRENT: Firebase {
@@ -70,5 +75,19 @@ class DataService {
         
         })
         
+    }
+    func createFirebasePaymentRegister(register: Dictionary<String, AnyObject>){
+        let postRef = REF_PAYMENT_REGISTER.childByAutoId()
+        postRef.setValue(register)
+        
+        //Inserting FK for seas to see payment in the future
+        
+        postRef.observeEventType(.Value, withBlock: { snapshot in
+            if let doesntExist = snapshot.value as? NSNull {
+                postRef.setValue(true)
+            }
+        })
+        
+    
     }
 }

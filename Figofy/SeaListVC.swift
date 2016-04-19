@@ -83,6 +83,8 @@ class SeaListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         sea = figofySeas[indexPath.row]
         
         print("\(sea.seaName) \(sea.seaPrices)")
+        DBPaymentRegister.staticPaymentRegister.seas = sea.seaId
+        print(DBPaymentRegister.staticPaymentRegister.seas)
         performSegueWithIdentifier("LakeInformationVC", sender: sea)
     }
     

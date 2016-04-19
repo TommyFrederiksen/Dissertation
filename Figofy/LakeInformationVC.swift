@@ -103,6 +103,10 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
             
             self.checkPayment = MPPayment(price: totalPrice, startDate: currentTime, endDate: currentTime.dateByAddingTimeInterval(self.hourToFutureDate!))
             
+            DBPaymentRegister.staticPaymentRegister.boughtTimeStart = self.checkPayment.startDate
+            DBPaymentRegister.staticPaymentRegister.boughtTimeEnd = self.checkPayment.endDate!
+            //DBPaymentRegister.staticPaymentRegister.amount = self.checkPayment.price
+            
             let orderID = NSUUID().UUIDString
             
             self.mobilePayPayment = MobilePayPayment(orderId: orderID, productPrice: Float(totalPrice))

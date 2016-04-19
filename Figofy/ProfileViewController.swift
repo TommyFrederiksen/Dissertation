@@ -30,12 +30,11 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         feedTableView.delegate = self
         feedTableView.dataSource = self
         observerForFeed()
-        curentUser()
-        
-        
-        
+        currentUser()
+
     }
-    func curentUser()
+    
+    func currentUser()
     {
         
         DataService.dataService.REF_USER_CURRENT.observeSingleEventOfType(.Value, withBlock: { snapshot in
@@ -44,6 +43,9 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
                 let _user = FigofyUser(postKey: snapshot.key, dictionary: userDict)
                 self.user = _user
                 self.nameLbl.text = "\(self.user.userFirstName) \(self.user.userLastName)"
+                DBPaymentRegister.staticPaymentRegister.user = self.user.facebookId
+                print(DBPaymentRegister.staticPaymentRegister.user)
+
             }
         })
         

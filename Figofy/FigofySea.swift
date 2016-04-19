@@ -11,6 +11,7 @@ import CoreLocation
 
 class FigofySea {
     
+    private var _seaId: String!
     private var _seaPostKey: String!
     private var _seaName: String!
     private var _seaDescription: String?
@@ -28,6 +29,9 @@ class FigofySea {
     private var _seaCoverImgUrl: String?
     private var _seaProfileImgUrl: String?
     
+    var seaId: String {
+        return _seaId
+    }
     
     var seaName: String {
         return _seaName
@@ -103,6 +107,10 @@ class FigofySea {
     
     init(postKey: String, dictionary: Dictionary<String, AnyObject>) {
         self._seaPostKey = postKey
+        
+        if let id = dictionary["id"] as? String {
+            self._seaId = id
+        }
         
         if let name = dictionary["name"] as? String {
             self._seaName = name

@@ -19,7 +19,7 @@ class FigofyUser {
     
     // MARK: Variables
     private var _userPostKey: String!
-    private var _facebookId: Int!
+    private var _facebookId: String!
     private var _firstName: String!
     private var _middleName: String?
     private var _lastName: String!
@@ -28,7 +28,7 @@ class FigofyUser {
     private var _birthday: String!//TODO
     private var _dateCreated: NSTimeInterval!
     
-    var facebookId: Int {
+    var facebookId: String {
         return _facebookId
     }
     
@@ -61,7 +61,7 @@ class FigofyUser {
     }
     
     
-    init(facebookId: Int, firstname: String, lastname: String, gender: String, birthday: String) {
+    init(facebookId: String, firstname: String, lastname: String, gender: String, birthday: String) {
         self._facebookId = facebookId
         self._firstName = firstname
         self._lastName = lastname
@@ -73,7 +73,7 @@ class FigofyUser {
     init(postKey: String, var dictionary: Dictionary<String, AnyObject>) {
         self._userPostKey = postKey
         
-        if let id = dictionary["id"] as? Int {
+        if let id = dictionary["id"] as? String {
             print("facebookId: \(id)")
             self._facebookId = id
         }

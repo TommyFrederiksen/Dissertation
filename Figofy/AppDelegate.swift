@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
 
@@ -23,9 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //TESTING
-        //MobilePayManager.sharedInstance().setupWithMerchantId("APPDK0000000000", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
+        MobilePayManager.sharedInstance().setupWithMerchantId("APPDK0000000000", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
         //ACTUAL
-        MobilePayManager.sharedInstance().setupWithMerchantId("APPDK2922783001", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
+//        MobilePayManager.sharedInstance().setupWithMerchantId("APPDK2922783001", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
         
         
         //facebook Check for log in
@@ -85,6 +86,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let orderId = mobilePaySuccess!.orderId
             let transactionId = mobilePaySuccess!.transactionId
             let amountWithdrawnFromCard = "\(mobilePaySuccess!.amountWithdrawnFromCard)"
+            
+            DBPaymentRegister.staticPaymentRegister.orderId = orderId
+            DBPaymentRegister.staticPaymentRegister.transactionId = transactionId
+            DBPaymentRegister.staticPaymentRegister.amount = Int(amountWithdrawnFromCard)!
+            
+            let newPaymentRegister: Dictionary<String, AnyObject> = [
+                "time_creted" : FirebaseServerValue.timestamp(),
+                "amount" : DBPaymentRegister.staticPaymentRegister.amount,
+                "seas" : DBPaymentRegister.staticPaymentRegister.seas,
+                "user" : DBPaymentRegister.staticPaymentRegister.user,
+                "bought_time_start" : DBPaymentRegister.staticPaymentRegister.boughtTimeStart,
+                "bought_time_end" : DBPaymentRegister.staticPaymentRegister.boughtTimeEnd,
+                "order_id" : DBPaymentRegister.staticPaymentRegister.orderId,
+                "transaction_id" : DBPaymentRegister.staticPaymentRegister.transactionId
+            ]
+            
+            DataService.dataService.createFirebasePaymentRegister(newPaymentRegister)
             
             self.lakeInformation?.updateAndPasInfoToClockVC()
             
