@@ -24,9 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //TESTING
-        MobilePayManager.sharedInstance().setupWithMerchantId("APPDK0000000000", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
+        //MobilePayManager.sharedInstance().setupWithMerchantId("APPDK0000000000", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
         //ACTUAL
-//        MobilePayManager.sharedInstance().setupWithMerchantId("APPDK2922783001", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
+       MobilePayManager.sharedInstance().setupWithMerchantId("APPDK2922783001", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
         
         
         //facebook Check for log in
