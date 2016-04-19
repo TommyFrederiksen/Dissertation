@@ -15,6 +15,7 @@ class LogCell: UITableViewCell {
     @IBOutlet weak var beskrivelseLabel: UILabel!
     @IBOutlet weak var datoLabel: UILabel!
   
+    @IBOutlet weak var vægt: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +29,8 @@ class LogCell: UITableViewCell {
         datoLabel.text = NSDate.convertToString(time: fish.timeCatched, style: .MediumStyle)
         let img = decodeBase64StringToImage(fish.imageStr)
         logImageView.image = img
-        beskrivelseLabel.text = "\(fish.note)"
+        beskrivelseLabel.text = "Art: \(fish.species)"
+        vægt.text = "\(fish.weight) Kg"
         
     }
     

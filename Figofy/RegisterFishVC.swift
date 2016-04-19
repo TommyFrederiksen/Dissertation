@@ -37,8 +37,9 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     var methodArray = ["Spinne","Mede","Flue","Trolle","Bombarda"]
     
     var lengthArray: [[Int]]?
-    var valuesArray: [Int] = []
-    
+    var weightArray: [[Int]]?
+    var valuesArray199: [Int] = []
+    var valuesArray10: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker = UIImagePickerController()
@@ -53,8 +54,10 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         // Do any additional setup after loading the view.
-        valuesArray += 0..<10
-        lengthArray = [valuesArray,valuesArray,valuesArray]
+        valuesArray199 += 0..<199
+        valuesArray10 += 0..<10
+        lengthArray = [valuesArray199]
+        weightArray = [valuesArray199,valuesArray10]
         
         fishImg.layer.cornerRadius = 2.5
         uploadButton.layer.cornerRadius = 5
@@ -182,7 +185,18 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var weightBtn: UIButton!
     @IBAction func weightTapped(sender: UIButton) {
         //Weight stuff
-        let action = ActionSheetDistancePicker(title: "Vælg Vægt", bigUnitString: "kg", bigUnitMax: 99, selectedBigUnit: 1, smallUnitString: "g", smallUnitMax: 9, selectedSmallUnit: 1, target: self, action: Selector("measurementWasSelected:smallUnit:element:"), origin: sender.superview!)
+        
+        let action = ActionSheetMultipleStringPicker(title: "Vælg Vægt", rows: weightArray, initialSelection: ([0,0]), doneBlock:{
+            picker, values, indexes in
+            
+            self.chooseWeight.setTitle("\(values[0]), \(values[1]) Kg", forState: .Normal)
+            return
+            }, cancelBlock: { ActionMultipleStringCancelBlock in
+                self.chooseWeight.setTitle("Tryk for Vægt", forState: .Normal)
+            }, origin: sender)
+//let action = ActionSheetDistancePicker(title: "Vælg Vægt", bigUnitString: ",",bigUnitMax: 99,
+//    selectedBigUnit: 1, smallUnitString: "Kg", smallUnitMax: 9, selectedSmallUnit: 1, target: self, action: Selector("measurementWasSelected:smallUnit:element:"), origin: sender.superview!)
+//
         
         action.showActionSheetPicker()
         
@@ -191,10 +205,10 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var lengthBtn: UIButton!
     @IBAction func lengthTapped(sender: UIButton) {
         //Length stuff
-        let action = ActionSheetMultipleStringPicker(title: "Vælg længde", rows: lengthArray, initialSelection: [0,0,0], doneBlock: {
+        let action = ActionSheetMultipleStringPicker(title: "Vælg længde", rows: lengthArray, initialSelection: [0] , doneBlock: {
             picker, values, indexes in
             
-                self.chooseLength.setTitle("\(values[0])\(values[1])\(values[2])", forState: .Normal)
+                self.chooseLength.setTitle("\(values[0]) Cm", forState: .Normal)
             return
             }, cancelBlock: { ActionMultipleStringCancelBlock in
                 self.chooseLength.setTitle("Tryk for Længde", forState: .Normal)
@@ -205,7 +219,7 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     @IBAction func methodTapped(sender: UIButton) {
         //Method stuff
-        let action = ActionSheetStringPicker(title: "Vælg Metode", rows: methodArray, initialSelection: 0, doneBlock: { picker, selectedIndex, selectedValue in
+        let action = ActionSheetStringPicker(title: "Vælg Metode", rows: methodArray, initialSelection: 1, doneBlock: { picker, selectedIndex, selectedValue in
             
                 self.chooseMethod.setTitle("\(selectedValue)", forState: .Normal)
             
