@@ -92,7 +92,7 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: Location delegate methods
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        var location = locations.last
+        let location = locations.last
         currentLocation = location?.coordinate
         locationManager.stopUpdatingLocation()
     }

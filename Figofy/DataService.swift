@@ -69,7 +69,7 @@ class DataService {
         
         fishRef.observeEventType(.Value, withBlock: { snapshot in
         
-            if let doesntExist = snapshot.value as? NSNull {
+            if let _ = snapshot.value as? NSNull {
                 fishRef.setValue(true)
             }
         
@@ -83,7 +83,7 @@ class DataService {
         //Inserting FK for seas to see payment in the future
         
         postRef.observeEventType(.Value, withBlock: { snapshot in
-            if let doesntExist = snapshot.value as? NSNull {
+            if let _ = snapshot.value as? NSNull {
                 postRef.setValue(true)
             }
         })

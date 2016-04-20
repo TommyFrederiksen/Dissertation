@@ -26,7 +26,7 @@ class FriendsVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
 
-        let img = UIImage(named: friendsImg[indexPath.row])
+        //let img = UIImage(named: friendsImg[indexPath.row])
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FriendsCell", forIndexPath: indexPath) as? UICollectionViewCell
         {
             cell

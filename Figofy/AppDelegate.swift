@@ -77,10 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: MOBILEPAY
     func handleMobilePayPaymentWithUrl(url: NSURL) {
         
-        let top: UIViewController?
-        if let view = UIApplication.sharedApplication().keyWindow?.rootViewController {
-            top = view
-        }
+       // let top: UIViewController?
+        //if let view = UIApplication.sharedApplication().keyWindow?.rootViewController {
+          //  top = view
+        //}
         MobilePayManager.sharedInstance().handleMobilePayPaymentWithUrl(url, success: { (mobilePaySuccess: MobilePaySuccessfulPayment?) -> Void in
             
             let orderId = mobilePaySuccess!.orderId
@@ -89,15 +89,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             DBPaymentRegister.staticPaymentRegister.orderId = orderId
             DBPaymentRegister.staticPaymentRegister.transactionId = transactionId
-            DBPaymentRegister.staticPaymentRegister.amount = Int(amountWithdrawnFromCard)!
+            
+            DBPaymentRegister.staticPaymentRegister.amount = Int(mobilePaySuccess!.amountWithdrawnFromCard)
             
             let newPaymentRegister: Dictionary<String, AnyObject> = [
                 "time_creted" : FirebaseServerValue.timestamp(),
                 "amount" : DBPaymentRegister.staticPaymentRegister.amount,
                 "seas" : DBPaymentRegister.staticPaymentRegister.seas,
                 "user" : DBPaymentRegister.staticPaymentRegister.user,
-                "bought_time_start" : DBPaymentRegister.staticPaymentRegister.boughtTimeStart,
-                "bought_time_end" : DBPaymentRegister.staticPaymentRegister.boughtTimeEnd,
+                "bought_time_start" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeStart)",
+                "bought_time_end" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeEnd)",
                 "order_id" : DBPaymentRegister.staticPaymentRegister.orderId,
                 "transaction_id" : DBPaymentRegister.staticPaymentRegister.transactionId
             ]
