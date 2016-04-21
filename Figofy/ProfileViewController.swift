@@ -38,6 +38,20 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
         self.feedTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
     }
+//    func invertFeed(fish: [Fish]){
+//        var newFish = [Fish]()
+//        newFish = self.fish
+//        
+//        var number = fish.count
+//        for cell in fish{
+//            newFish.insert(cell, atIndex: number)
+//            newFish.re
+//            number = number - 1
+//         
+//        }
+//        self.fish.removeAll()
+//        self.fish = newFish
+//    }
     
     func currentUser()
     {
@@ -78,6 +92,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
                         
                     }
                 }
+                self.fish = self.fish.reverse()
                 self.feedTableView.reloadData()
                 
 
