@@ -56,7 +56,7 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view.
         valuesArray199 += 0..<199
         valuesArray10 += 0..<10
-        lengthArray = [valuesArray199]
+        lengthArray = [valuesArray10,valuesArray10,valuesArray10]
         weightArray = [valuesArray199,valuesArray10]
         
         fishImg.layer.cornerRadius = 2.5
@@ -186,17 +186,17 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func weightTapped(sender: UIButton) {
         //Weight stuff
         
-        let action = ActionSheetMultipleStringPicker(title: "Vælg Vægt", rows: weightArray, initialSelection: ([0,0]), doneBlock:{
-            picker, values, indexes in
-            
-            self.chooseWeight.setTitle("\(values[0]), \(values[1]) Kg", forState: .Normal)
-            return
-            }, cancelBlock: { ActionMultipleStringCancelBlock in
-                self.chooseWeight.setTitle("Tryk for Vægt", forState: .Normal)
-            }, origin: sender)
-//let action = ActionSheetDistancePicker(title: "Vælg Vægt", bigUnitString: ",",bigUnitMax: 99,
-//    selectedBigUnit: 1, smallUnitString: "Kg", smallUnitMax: 9, selectedSmallUnit: 1, target: self, action: Selector("measurementWasSelected:smallUnit:element:"), origin: sender.superview!)
-//
+//        let action = ActionSheetMultipleStringPicker(title: "Vælg Vægt", rows: weightArray, initialSelection: ([0,0]), doneBlock:{
+//            picker, values, indexes in
+//            
+//            self.chooseWeight.setTitle("\(values[0]), \(values[1]) Kg", forState: .Normal)
+//            return
+//            }, cancelBlock: { ActionMultipleStringCancelBlock in
+//                self.chooseWeight.setTitle("Tryk for Vægt", forState: .Normal)
+//            }, origin: sender)
+        let action = ActionSheetDistancePicker(title: "Vælg Vægt", bigUnitString: ",",bigUnitMax: 99,
+                                               selectedBigUnit: 1, smallUnitString: "Kg", smallUnitMax: 9, selectedSmallUnit: 1, target: self, action: Selector("measurementWasSelected:smallUnit:element:"), origin: sender.superview!)
+        
         
         action.showActionSheetPicker()
         
@@ -205,21 +205,21 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var lengthBtn: UIButton!
     @IBAction func lengthTapped(sender: UIButton) {
         //Length stuff
-        let action = ActionSheetMultipleStringPicker(title: "Vælg længde", rows: lengthArray, initialSelection: [0] , doneBlock: {
+        let action = ActionSheetMultipleStringPicker(title: "Vælg længde", rows: lengthArray, initialSelection: [0,0,0] , doneBlock: {
             picker, values, indexes in
             
-                self.chooseLength.setTitle("\(values[0]) Cm", forState: .Normal)
+                self.chooseLength.setTitle("\(values[0]).\(values[1])\(values[2])", forState: .Normal)
             return
             }, cancelBlock: { ActionMultipleStringCancelBlock in
                 self.chooseLength.setTitle("Tryk for Længde", forState: .Normal)
             }, origin: sender)
-        
+     
         action.showActionSheetPicker()
         
     }
     @IBAction func methodTapped(sender: UIButton) {
         //Method stuff
-        let action = ActionSheetStringPicker(title: "Vælg Metode", rows: methodArray, initialSelection: 1, doneBlock: { picker, selectedIndex, selectedValue in
+        let action = ActionSheetStringPicker(title: "Vælg Metode", rows: methodArray, initialSelection: 0, doneBlock: { picker, selectedIndex, selectedValue in
             
                 self.chooseMethod.setTitle("\(selectedValue)", forState: .Normal)
             
@@ -247,10 +247,11 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func postToFirebase(imgData: String) {
-        
+        print(chooseWeight.currentTitle)
+        print(chooseLength.currentTitle)
         let kind: String = chooseSpecies.currentTitle!
-        let kg = Double(chooseWeight.currentTitle!)!
-        let m = Int(chooseLength.currentTitle!)!
+        let kg = Float(chooseWeight.currentTitle!)!
+        let m = Float(chooseLength.currentTitle!)!
         let bait = writeBait.text!
         let method = chooseMethod.currentTitle!
         let note = writeNote.text!
