@@ -89,7 +89,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             DBPaymentRegister.staticPaymentRegister.orderId = orderId
             DBPaymentRegister.staticPaymentRegister.transactionId = transactionId
-            
             DBPaymentRegister.staticPaymentRegister.amount = Int(mobilePaySuccess!.amountWithdrawnFromCard)
             
             let newPaymentRegister: Dictionary<String, AnyObject> = [

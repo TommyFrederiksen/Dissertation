@@ -32,6 +32,11 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         observerForFeed()
         currentUser()
 
+
+    }
+    func scrollToFirstRow() {
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.feedTableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
     }
     
     func currentUser()
@@ -50,7 +55,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         })
         
     }
-    
     
     func observerForFeed()
     {
@@ -75,6 +79,8 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
                     }
                 }
                 self.feedTableView.reloadData()
+                
+
         })
         
         
@@ -96,5 +102,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         cell?.configureCell(self.fish[indexPath.row])
         
         return cell!
+        
     }
 }
