@@ -28,7 +28,7 @@ class FeedCell: UITableViewCell {
    
     func configureCell(fish: Fish)
     {
-        længdeLabel.text = "\(fish.length) Cm"
+        længdeLabel.text = "\(fish.length) M"
         vægtLabel.text = "\(fish.weight) Kg"
         agnLabel.text = "\(fish.bait)"
         let img = decodeBase64StringToImage(fish.imageStr)
