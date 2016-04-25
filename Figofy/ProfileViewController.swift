@@ -78,6 +78,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
                         
                     }
                 }
+                self.fish = self.fish.reverse()
                 self.feedTableView.reloadData()
                 
 

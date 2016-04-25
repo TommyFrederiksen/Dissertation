@@ -47,6 +47,7 @@
 		651018151C50D9EB00B7FECC /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018141C50D9EB00B7FECC /* MapVC.swift */; };
 		651018171C50DB4C00B7FECC /* LakeInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018161C50DB4C00B7FECC /* LakeInformationVC.swift */; };
 		651018191C50DBDC00B7FECC /* MobilePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018181C50DBDC00B7FECC /* MobilePayViewController.swift */; };
+		652CC3D31CCDEBA100BEBE42 /* DBPaymentRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652CC3D21CCDEBA100BEBE42 /* DBPaymentRegister.swift */; };
 		654A27101C350EA6008AA4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A270F1C350EA6008AA4EB /* AppDelegate.swift */; };
 		654A27121C350EA6008AA4EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A27111C350EA6008AA4EB /* LoginViewController.swift */; };
 		654A27151C350EA6008AA4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A27131C350EA6008AA4EB /* Main.storyboard */; };
@@ -67,7 +68,6 @@
 		65D98CEC1C9023A900D54BB9 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CEB1C9023A900D54BB9 /* FriendsCell.swift */; };
 		65D98CEE1C9023E300D54BB9 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CED1C9023E300D54BB9 /* FriendsVC.swift */; };
 		F98634459CF7905C5013FABE /* Pods in Frameworks */ = {isa = PBXBuildFile; fileRef = B10CAFE5CCEBA3FE110E428F /* Pods */; };
-		FF7EACA11CC64A380053213F /* DBPaymentRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7EACA01CC64A380053213F /* DBPaymentRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +129,7 @@
 		651018141C50D9EB00B7FECC /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		651018161C50DB4C00B7FECC /* LakeInformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LakeInformationVC.swift; sourceTree = "<group>"; };
 		651018181C50DBDC00B7FECC /* MobilePayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePayViewController.swift; sourceTree = "<group>"; };
+		652CC3D21CCDEBA100BEBE42 /* DBPaymentRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPaymentRegister.swift; sourceTree = "<group>"; };
 		654A270C1C350EA6008AA4EB /* Figofy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Figofy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654A270F1C350EA6008AA4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654A27111C350EA6008AA4EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +158,6 @@
 		6B3D4BDC1C3533F8ED3B5DA2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10CAFE5CCEBA3FE110E428F /* Pods */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods; path = ../../../Pods; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D388C7DAA3D5DB5B97783B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FF7EACA01CC64A380053213F /* DBPaymentRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPaymentRegister.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,7 +258,7 @@
 				189DE0CD1C86FA1400EA2977 /* FishCatch.swift */,
 				65D98CEB1C9023A900D54BB9 /* FriendsCell.swift */,
 				18869D1A1CA13C8300635951 /* MPPayment.swift */,
-				FF7EACA01CC64A380053213F /* DBPaymentRegister.swift */,
+				652CC3D21CCDEBA100BEBE42 /* DBPaymentRegister.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -603,7 +603,7 @@
 				18E642B01C80A87F00155CCC /* RegisterFishVC.swift in Sources */,
 				189DE0CE1C86FA1400EA2977 /* FishCatch.swift in Sources */,
 				65D98CEC1C9023A900D54BB9 /* FriendsCell.swift in Sources */,
-				FF7EACA11CC64A380053213F /* DBPaymentRegister.swift in Sources */,
+				652CC3D31CCDEBA100BEBE42 /* DBPaymentRegister.swift in Sources */,
 				183B64C51C58F58C00B78D1B /* GradientColor.swift in Sources */,
 				1846984F1C60C0E50095D64B /* SeaListVC.swift in Sources */,
 				655044CF1C64D24700D79B89 /* Clock.swift in Sources */,

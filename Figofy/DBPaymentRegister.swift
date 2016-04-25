@@ -90,7 +90,7 @@ class DBPaymentRegister{
     }
     
     init (){
-    
+        
     }
     
     
