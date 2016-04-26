@@ -80,11 +80,14 @@ class DataService {
         let postRef = REF_PAYMENT_REGISTER.childByAutoId()
         postRef.setValue(register)
         
+        let postId = postRef.key
+        let REF = REF_SEAS.childByAppendingPath(DBPaymentRegister.staticPaymentRegister.seas)
+        let paymentRef = REF.childByAppendingPath("payment").childByAppendingPath(postId)
         //Inserting FK for seas to see payment in the future
         
-        postRef.observeEventType(.Value, withBlock: { snapshot in
+        paymentRef.observeEventType(.Value, withBlock: { snapshot in
             if let _ = snapshot.value as? NSNull {
-                postRef.setValue(true)
+                paymentRef.setValue(true)
             }
         })
         
