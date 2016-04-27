@@ -44,7 +44,7 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                     
                     let fishData = Fish(postKey: fishIds.key, dictionary: fishDict)
                     self.fish.append(fishData)
-                    //print(fishData)
+                
                 }
                 
                 

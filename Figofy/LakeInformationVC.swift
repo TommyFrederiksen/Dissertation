@@ -91,12 +91,13 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
         let totalPrice = prices[indexPath.row]
         let totalHours: String = "\(hours[indexPath.row])"
         let hour = checkHours(totalHours)
+        DBPaymentRegister.staticPaymentRegister.product = totalHours
         
         // UNIQUE ID FOR TRANSACTION
         //print(NSUUID().UUIDString)
         
         
-        let alertWithChild = UIAlertController(title: "Bekræft", message: "Du har valgt \(hour) for \(totalPrice).\n Ønsker du at fortsætte til betaling?", preferredStyle: .ActionSheet)
+        let alertWithChild = UIAlertController(title: "Bekræft", message: "Du har valgt \(hour) timer for \(totalPrice) Kr.\n Ønsker du at fortsætte til betaling?", preferredStyle: .ActionSheet)
         
         
         let yesAction = UIAlertAction(title: "Ja", style: .Default, handler: { yesAction in

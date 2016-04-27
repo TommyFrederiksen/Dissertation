@@ -99,6 +99,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 "bought_time_start" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeStart)",
                 "bought_time_end" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeEnd)",
                 "order_id" : DBPaymentRegister.staticPaymentRegister.orderId,
+                "name" : DBPaymentRegister.staticPaymentRegister.name,
+                "product" : DBPaymentRegister.staticPaymentRegister.product,
                 "transaction_id" : DBPaymentRegister.staticPaymentRegister.transactionId
             ]
             

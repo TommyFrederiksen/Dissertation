@@ -70,7 +70,7 @@ class FigofyUser {
     }
     
     
-    init(postKey: String, var dictionary: Dictionary<String, AnyObject>) {
+    init(postKey: String, dictionary: Dictionary<String, AnyObject>) {
         self._userPostKey = postKey
         
         if let id = dictionary["id"] as? String {

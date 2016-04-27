@@ -48,6 +48,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
                 let _user = FigofyUser(postKey: snapshot.key, dictionary: userDict)
                 self.user = _user
                 self.nameLbl.text = "\(self.user.userFirstName)"
+                DBPaymentRegister.staticPaymentRegister.name = "\(self.user.userFirstName) \(self.user.userLastName)"
                 DBPaymentRegister.staticPaymentRegister.user = self.user.facebookId
                 print(DBPaymentRegister.staticPaymentRegister.user)
 

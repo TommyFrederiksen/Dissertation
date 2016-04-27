@@ -19,6 +19,8 @@ class DBPaymentRegister{
     private var _boughtTimeEnd: NSDate!
     private var _orderId: String!
     private var _transaktionId: String!
+    private var _name: String!
+    private var _product: String!
     
     var amount: Int {
         get{
@@ -87,6 +89,22 @@ class DBPaymentRegister{
             _transaktionId = newValue
         }
         
+    }
+    var name: String {
+        get{
+            return _name
+        }
+        set{
+            _name = newValue
+        }
+    }
+    var product: String {
+        get{
+            return _product
+        }
+        set{
+            _product = newValue
+        }
     }
     
     init (){
