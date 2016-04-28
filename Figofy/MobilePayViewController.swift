@@ -48,7 +48,7 @@ class MobilePayViewController: UIViewController, CLLocationManagerDelegate {
         
         timerOn = !timerOn
         if timerOn {
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "updateCounter", userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(MobilePayViewController.updateCounter), userInfo: nil, repeats: true)
         } else {
             timer.invalidate()
             timerOn = false

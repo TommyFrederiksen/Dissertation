@@ -26,7 +26,7 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
     var mobilePayPayment = MobilePayPayment()
     var hours = [String]()
     var prices = [Int]()
-    var checkPayment: MPPayment!
+    var checkPayment = MPPayment()
     var hourToFutureDate: NSTimeInterval?
     
     // MARK: View Functions
@@ -101,12 +101,32 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
         
         
         let yesAction = UIAlertAction(title: "Ja", style: .Default, handler: { yesAction in
-            let currentTime = NSDate()
+            
+            let clock = Clock()
             self.hourToFutureDate = Double(hour * 60 * 60)
+            let formatter = NSDateFormatter()
+            formatter.timeStyle = .MediumStyle
+            let time = formatter.stringFromDate(clock.currentTime)
             
-            self.checkPayment = MPPayment(price: totalPrice, startDate: currentTime, endDate: currentTime.dateByAddingTimeInterval(self.hourToFutureDate!))
             
+            print(time)
+            print(clock.currentTime)
+            
+            self.checkPayment.startDate = time
+            self.checkPayment.endDate = clock.currentTime.dateByAddingTimeInterval(self.hourToFutureDate!)
+            self.checkPayment.price = totalPrice
+            
+            
+            //print("\(self.checkPayment.startDate)")
+            print("\(self.checkPayment.endDate)")
             DBPaymentRegister.staticPaymentRegister.boughtTimeStart = self.checkPayment.startDate
+            
+            print("\(NSDate.init())")
+            
+            let formatter2 = NSDateFormatter()
+            formatter2.timeStyle = .MediumStyle
+            print(formatter2.stringFromDate(clock.currentTime))
+            
             DBPaymentRegister.staticPaymentRegister.boughtTimeEnd = self.checkPayment.endDate!
             //DBPaymentRegister.staticPaymentRegister.amount = self.checkPayment.price
             

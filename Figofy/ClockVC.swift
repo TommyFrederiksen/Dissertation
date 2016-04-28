@@ -35,10 +35,10 @@ class ClockVC: UIViewController {
         countdownLabel.text = ""
         
         
-        currentTime = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCurrentTime", userInfo: nil, repeats: true)
+        currentTime = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ClockVC.updateCurrentTime), userInfo: nil, repeats: true)
         
         
-        countdownTime = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateCountdown", userInfo: nil, repeats: true)
+        countdownTime = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ClockVC.updateCountdown), userInfo: nil, repeats: true)
     }
     
     

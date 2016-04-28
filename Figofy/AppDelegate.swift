@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let orderId = mobilePaySuccess!.orderId
             let transactionId = mobilePaySuccess!.transactionId
-            let amountWithdrawnFromCard = "\(mobilePaySuccess!.amountWithdrawnFromCard)"
+            _ = "\(mobilePaySuccess!.amountWithdrawnFromCard)"
             
             DBPaymentRegister.staticPaymentRegister.orderId = orderId
             DBPaymentRegister.staticPaymentRegister.transactionId = transactionId

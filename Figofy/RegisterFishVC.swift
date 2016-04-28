@@ -195,7 +195,7 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
 //                self.chooseWeight.setTitle("Tryk for Vægt", forState: .Normal)
 //            }, origin: sender)
         let action = ActionSheetDistancePicker(title: "Vælg Vægt", bigUnitString: ",",bigUnitMax: 99,
-                                               selectedBigUnit: 1, smallUnitString: "Kg", smallUnitMax: 9, selectedSmallUnit: 1, target: self, action: Selector("measurementWasSelected:smallUnit:element:"), origin: sender.superview!)
+                                               selectedBigUnit: 1, smallUnitString: "Kg", smallUnitMax: 9, selectedSmallUnit: 1, target: self, action: #selector(RegisterFishVC.measurementWasSelected(_:smallUnit:element:)), origin: sender.superview!)
         
         
         action.showActionSheetPicker()

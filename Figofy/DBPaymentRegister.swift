@@ -15,7 +15,7 @@ class DBPaymentRegister{
     private var _amount: Int!
     private var _seas: String!
     private var _user: String!
-    private var _boughtTimeStart: NSDate!
+    private var _boughtTimeStart: String!
     private var _boughtTimeEnd: NSDate!
     private var _orderId: String!
     private var _transaktionId: String!
@@ -52,7 +52,7 @@ class DBPaymentRegister{
         
     }
     
-    var boughtTimeStart: NSDate {
+    var boughtTimeStart: String {
         get{
             return _boughtTimeStart!
         }

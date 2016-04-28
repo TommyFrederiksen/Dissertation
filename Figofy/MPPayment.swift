@@ -12,26 +12,38 @@ import Foundation
 class MPPayment {
     
     private var _price: Int!
-    private var _startDate: NSDate!
+    private var _startDate: String!
     private var _endDate: NSDate?
     
     var price: Int {
-        return _price
+        get{
+            return _price}
+        set{
+            _price = newValue
+        }
     }
     
-    var startDate: NSDate {
-        return _startDate
+    var startDate: String{
+        get{
+            return _startDate
+        }set{
+            _startDate = newValue
+        }
     }
     
     var endDate: NSDate? {
+        get{
         return _endDate
+        }set{
+            _endDate = newValue
+        }
     }
     
-    
-    init(price: Int, startDate: NSDate, endDate: NSDate?) {
-        self._price = price
-        self._startDate = startDate
-        self._endDate = endDate
-    }
+    init(){}
+//    init(price: Int, startDate: NSDate, endDate: NSDate?) {
+//        self._price = price
+//        self._startDate = startDate
+//        self._endDate = endDate
+//    }
     
 }
