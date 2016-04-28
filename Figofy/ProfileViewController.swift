@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
     @IBOutlet weak var feedTableView: UITableView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
-    
+    var clock = Clock()
     var user: FigofyUser!
     var fish = [Fish]()
     
@@ -31,6 +31,12 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         feedTableView.dataSource = self
         observerForFeed()
         currentUser()
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "Europe/Copenhagen")
+        formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss Z"
+        let date = formatter.dateFromString("Thu, 04 Sep 2014 10:50:12 0000") as? NSDate!
+        print(date)
+        
 
 
     }

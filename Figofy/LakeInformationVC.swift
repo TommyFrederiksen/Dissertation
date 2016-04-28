@@ -28,6 +28,8 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
     var prices = [Int]()
     var checkPayment = MPPayment()
     var hourToFutureDate: NSTimeInterval?
+    var clockDenmark = String()
+    
     
     // MARK: View Functions
     override func viewDidLoad() {
@@ -105,28 +107,25 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
             let clock = Clock()
             self.hourToFutureDate = Double(hour * 60 * 60)
             let formatter = NSDateFormatter()
-            formatter.timeStyle = .MediumStyle
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZZ"
             let time = formatter.stringFromDate(clock.currentTime)
             
             
-            print(time)
-            print(clock.currentTime)
+            print("time \(time)")
+            self.clockDenmark = clock.setLocalTimeDenmark(clock.currentTime)
+            print("clockDenmark\(self.clockDenmark)")
+            print("curentTimeDenmarkString \(clock.setLocalTimeDenmark(clock.currentTime))")
+            let newTime = self.convertToDateFromString(self.clockDenmark)
+            print(newTime)
+        
+            //print("clockDenmarkNSDate \(clock2)")
             
             self.checkPayment.startDate = time
-            self.checkPayment.endDate = clock.currentTime.dateByAddingTimeInterval(self.hourToFutureDate!)
+            let time2 = formatter.dateFromString(time)
+            self.checkPayment.endDate = time2!.dateByAddingTimeInterval(self.hourToFutureDate!)
             self.checkPayment.price = totalPrice
             
-            
-            //print("\(self.checkPayment.startDate)")
-            print("\(self.checkPayment.endDate)")
             DBPaymentRegister.staticPaymentRegister.boughtTimeStart = self.checkPayment.startDate
-            
-            print("\(NSDate.init())")
-            
-            let formatter2 = NSDateFormatter()
-            formatter2.timeStyle = .MediumStyle
-            print(formatter2.stringFromDate(clock.currentTime))
-            
             DBPaymentRegister.staticPaymentRegister.boughtTimeEnd = self.checkPayment.endDate!
             //DBPaymentRegister.staticPaymentRegister.amount = self.checkPayment.price
             
@@ -152,6 +151,14 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
         
         self.presentViewController(alertWithChild, animated: true, completion: nil)
         
+    }
+    func convertToDateFromString(string: String) -> NSDate {
+        let formatterDenmark = NSDateFormatter()
+        
+        formatterDenmark.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZZ"
+        formatterDenmark.timeZone = NSTimeZone(forSecondsFromGMT: +7200)
+        let newTime = (formatterDenmark.dateFromString(string))
+        return newTime!
     }
     
     func updateAndPasInfoToClockVC() {

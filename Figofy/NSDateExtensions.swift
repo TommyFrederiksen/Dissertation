@@ -19,6 +19,11 @@ extension NSDate {
         formatter.dateStyle = style
         return formatter.stringFromDate(dateTime)
     }
+//    class func convertStringToDate(time dateTime: String, style: NSDateFormatterStyle) -> NSDate {
+//        let formatter = NSDateFormatter()
+//        formatter.dateStyle = style
+//        return formatter.dateFromString(dateTime)!
+//    }
     
     var zeroSecond : NSDate {
         return NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!.dateBySettingHour(hour, minute: minute, second: 0, ofDate: self, options: [])!
