@@ -97,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 "seas" : DBPaymentRegister.staticPaymentRegister.seas,
                 "user" : DBPaymentRegister.staticPaymentRegister.user,
                 "bought_time_start" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeStart)",
-                "bought_time_end" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeEnd)",
+                //"bought_time_end" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeEnd)",
                 "order_id" : DBPaymentRegister.staticPaymentRegister.orderId,
                 "name" : DBPaymentRegister.staticPaymentRegister.name,
                 "product" : DBPaymentRegister.staticPaymentRegister.product,

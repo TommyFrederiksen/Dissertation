@@ -126,7 +126,8 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
             self.checkPayment.price = totalPrice
             
             DBPaymentRegister.staticPaymentRegister.boughtTimeStart = self.checkPayment.startDate
-            DBPaymentRegister.staticPaymentRegister.boughtTimeEnd = self.checkPayment.endDate!
+            DBPaymentRegister.staticPaymentRegister.hours = hour
+            //DBPaymentRegister.staticPaymentRegister.boughtTimeEnd = self.checkPayment.endDate!
             //DBPaymentRegister.staticPaymentRegister.amount = self.checkPayment.price
             
             let orderID = NSUUID().UUIDString

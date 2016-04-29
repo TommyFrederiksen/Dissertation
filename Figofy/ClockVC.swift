@@ -17,6 +17,7 @@ class ClockVC: UIViewController {
     var payment: MobilePayPayment?
     let clock = Clock()
     var timeInformation: MPPayment?
+    var paymentDict = [DBPaymentRegister]()
     
     var startDate: NSDate?
     var endDate: NSDate?
@@ -33,10 +34,9 @@ class ClockVC: UIViewController {
         print("VIEWDIDLOAD")
         timeLabel.text = ""
         countdownLabel.text = ""
-        
+        getPaymentFromFirebase()
         
         currentTime = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ClockVC.updateCurrentTime), userInfo: nil, repeats: true)
-        
         
         countdownTime = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ClockVC.updateCountdown), userInfo: nil, repeats: true)
     }
@@ -73,6 +73,22 @@ class ClockVC: UIViewController {
             countdownLabel.text = "00:00:00"
         }
         
+    }
+    func getPaymentFromFirebase(){
+        self.paymentDict = []
+        DataService.dataService.REF_USERS.childByAppendingPath("facebook:\(DBPaymentRegister.staticPaymentRegister.user)").childByAppendingPath("payment").observeEventType(.ChildAdded, withBlock: { snap in
+            print("snapkey: \(snap.key)")
+            DataService.dataService.REF_PAYMENT_REGISTER.childByAppendingPath(snap.key).observeEventType(.Value, withBlock: { snapPay in
+                print(snapPay)
+                if let payDict = snapPay.value as? Dictionary<String, AnyObject>{
+                    let payData = DBPaymentRegister(postKey: snap.key, dictionary: payDict)
+                    self.paymentDict.append(payData)
+                }
+            })
+        
+        })
+      
+    
     }
     
     

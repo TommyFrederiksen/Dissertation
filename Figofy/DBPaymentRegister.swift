@@ -12,6 +12,7 @@ class DBPaymentRegister{
     
     static var staticPaymentRegister = DBPaymentRegister()
     
+    private var _paymentPostkey: String!
     private var _amount: Int!
     private var _seas: String!
     private var _user: String!
@@ -21,6 +22,17 @@ class DBPaymentRegister{
     private var _transaktionId: String!
     private var _name: String!
     private var _product: String!
+    private var _hours: Int!
+    
+    var paymentPostKey: String {
+        get{
+            return _paymentPostkey!
+        }
+        set{
+            _paymentPostkey = newValue
+        }
+        
+    }
     
     var amount: Int {
         get{
@@ -106,11 +118,54 @@ class DBPaymentRegister{
             _product = newValue
         }
     }
+    var hours: Int {
+        get{
+            return _hours
+        }
+        set{
+            _hours = newValue
+        }
+    }
     
     init (){
         
     }
     
-    
+    init (postKey: String, dictionary: Dictionary<String, AnyObject>){
+        self._paymentPostkey = postKey
+        
+        if let amount = dictionary["amount"] as? Int{
+            self._amount = amount
+        }
+        if let seas = dictionary["seas"] as? String{
+            self._seas = seas
+        }
+        if let user = dictionary["user"] as? String{
+            self._user = user
+        }
+        if let boughtTimeStart = dictionary["bought_time_start"] as? String{
+            self._boughtTimeStart = boughtTimeStart
+        }
+        if let hours = dictionary["hours"] as? Int{
+            self._hours = hours
+        }
+        if let orderId = dictionary["order_id"] as? String{
+            self._orderId = orderId
+        }
+        if let transactionId = dictionary["transaction_id"] as? String{
+            self._transaktionId = transactionId
+        }
+
+        if let name = dictionary["name"] as? String {
+            self._name = name
+        }
+        if let product = dictionary["product"] as? String {
+            self._product = product
+        }
+        
+        
+        
+    }
+
     
 }

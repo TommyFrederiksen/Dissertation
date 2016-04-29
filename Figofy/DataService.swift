@@ -82,7 +82,7 @@ class DataService {
         
         let postId = postRef.key
         let REF = REF_SEAS.childByAppendingPath(DBPaymentRegister.staticPaymentRegister.seas)
-        let paymentRef = REF.childByAppendingPath("payment").childByAppendingPath(postId)
+        var paymentRef = REF.childByAppendingPath("payment").childByAppendingPath(postId)
         //Inserting FK for seas to see payment in the future
         
         paymentRef.observeEventType(.Value, withBlock: { snapshot in
@@ -90,7 +90,15 @@ class DataService {
                 paymentRef.setValue(true)
             }
         })
+        let REFUSER = REF_USERS.childByAppendingPath(DBPaymentRegister.staticPaymentRegister.user)
+        paymentRef = REFUSER.childByAppendingPath("payment").childByAppendingPath(postId)
+        paymentRef.observeEventType(.Value, withBlock: { snapshot in
+              if let _ = snapshot.value as? NSNull {
         
+        paymentRef.setValue(true)
+            }
+        
+        })
     
     }
 }
