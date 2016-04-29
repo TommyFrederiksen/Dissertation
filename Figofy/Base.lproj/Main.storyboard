@@ -483,11 +483,11 @@
                         <viewControllerLayoutGuide type="bottom" id="CHs-3z-sd4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bgi-Eq-HOV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jh7-1l-pL7" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="270" y="126" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jh7-1l-pL7" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="270" y="151" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="cJk-9t-2Uv"/>
                                     <constraint firstAttribute="width" constant="60" id="zxw-Cq-G1g"/>
@@ -495,15 +495,15 @@
                                 <state key="normal" title="Profil"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEA-Wb-TAw" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="162" y="178" width="60" height="60"/>
+                                <rect key="frame" x="162" y="203" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="kpZ-sm-fl2"/>
                                     <constraint firstAttribute="width" constant="60" id="nhM-Gv-xI6"/>
                                 </constraints>
                                 <state key="normal" title="Log Detaljer"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRH-fb-JTI" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="150" y="246" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRH-fb-JTI" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="150" y="271" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Er0-a0-mFM"/>
                                     <constraint firstAttribute="width" constant="60" id="WlA-6l-Imi"/>
@@ -513,8 +513,8 @@
                                     <segue destination="mxp-lQ-vdf" kind="show" id="9ch-Nb-GuZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHr-19-o8U" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="162" y="313" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHr-19-o8U" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="162" y="338" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="DAA-oN-8nD"/>
                                     <constraint firstAttribute="height" constant="60" id="yxd-Eu-Ihj"/>
@@ -524,8 +524,8 @@
                                     <segue destination="RWH-db-0dg" kind="show" id="ZEs-on-qRF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST9-bB-zN9" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="378" y="313" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST9-bB-zN9" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="378" y="338" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8iV-jl-ARK"/>
                                     <constraint firstAttribute="width" constant="60" id="lDZ-14-4rm"/>
@@ -535,16 +535,16 @@
                                     <segue destination="X5z-Ec-O9v" kind="show" id="i3I-jW-1BC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ3-Jm-aVm" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="337" y="354" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ3-Jm-aVm" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="337" y="379" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="FNf-V6-y2M"/>
                                     <constraint firstAttribute="width" constant="60" id="lSt-PD-MQn"/>
                                 </constraints>
                                 <state key="normal" title="Egne Fisketure"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJD-01-rYr" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="203" y="354" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJD-01-rYr" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="203" y="379" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="FNf-vX-Mt1"/>
                                     <constraint firstAttribute="width" constant="60" id="RU0-63-gom"/>
@@ -554,8 +554,8 @@
                                     <segue destination="17N-41-QlL" kind="show" id="7F1-4m-2js"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE1-wP-4DQ" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="390" y="246" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TE1-wP-4DQ" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="390" y="271" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="M2l-n0-23T"/>
                                     <constraint firstAttribute="height" constant="60" id="ZXv-Tf-yGF"/>
@@ -563,23 +563,23 @@
                                 <state key="normal" title="Chat"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-xm-zdx" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="378" y="178" width="60" height="60"/>
+                                <rect key="frame" x="378" y="203" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="IVS-WS-8Xk"/>
                                     <constraint firstAttribute="width" constant="60" id="Sib-41-SfI"/>
                                 </constraints>
                                 <state key="normal" title="Galleri"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H13-eR-Q8S" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="337" y="138" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H13-eR-Q8S" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="337" y="163" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="1IR-0z-yep"/>
                                     <constraint firstAttribute="height" constant="60" id="442-2c-uFL"/>
                                 </constraints>
                                 <state key="normal" title="Mit Udstyr"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8X7-8Q-FUh" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="270" y="366" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8X7-8Q-FUh" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="270" y="391" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="1yg-iy-C07"/>
                                     <constraint firstAttribute="height" constant="60" id="F0C-Db-c7Z"/>
@@ -589,8 +589,8 @@
                                     <segue destination="vB9-OO-Q0m" kind="show" id="cRP-wS-EYa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSh-6A-5Jg" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
-                                <rect key="frame" x="203" y="138" width="60" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSh-6A-5Jg" customClass="FigofyButton" customModule="Figofy" customModuleProvider="target">
+                                <rect key="frame" x="203" y="163" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="MZt-4d-xqw"/>
                                     <constraint firstAttribute="width" constant="60" id="yog-QZ-TJ0"/>
@@ -882,15 +882,15 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf0-9b-lHI">
-                                                        <rect key="frame" x="100" y="0.0" width="484" height="40"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf0-9b-lHI">
+                                                        <rect key="frame" x="100" y="0.0" width="114" height="40"/>
                                                         <state key="normal" title="Tryk for Længde"/>
                                                         <connections>
                                                             <action selector="lengthTapped:" destination="vB9-OO-Q0m" eventType="touchUpInside" id="jQT-0o-Ejc"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBA-BA-77z">
-                                                        <rect key="frame" x="584" y="0.0" width="0.0" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBA-BA-77z">
+                                                        <rect key="frame" x="214" y="0.0" width="370" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1333,7 +1333,6 @@
                         <segue destination="X5z-Ec-O9v" kind="relationship" relationship="viewControllers" id="uZe-45-cdm"/>
                         <segue destination="RWH-db-0dg" kind="relationship" relationship="viewControllers" id="fJp-tJ-Ebv"/>
                         <segue destination="17N-41-QlL" kind="relationship" relationship="viewControllers" id="5hS-bE-j4M"/>
-                        <segue destination="tZn-Oz-r41" kind="relationship" relationship="viewControllers" id="fuF-Tv-Wg7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5x-ec-Mph" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2205,12 +2204,12 @@
         <image name="timeIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="5hS-bE-j4M"/>
         <segue reference="ar3-Dq-Xt8"/>
-        <segue reference="i3I-jW-1BC"/>
-        <segue reference="ZEs-on-qRF"/>
-        <segue reference="7F1-4m-2js"/>
-        <segue reference="CMQ-vI-epo"/>
+        <segue reference="fJp-tJ-Ebv"/>
+        <segue reference="uZe-45-cdm"/>
         <segue reference="6LF-jn-OIM"/>
         <segue reference="oUD-wd-LdX"/>
+        <segue reference="CMQ-vI-epo"/>
     </inferredMetricsTieBreakers>
 </document>

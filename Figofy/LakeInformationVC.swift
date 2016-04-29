@@ -107,7 +107,7 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
             let clock = Clock()
             self.hourToFutureDate = Double(hour * 60 * 60)
             let formatter = NSDateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZZ"
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             let time = formatter.stringFromDate(clock.currentTime)
             
             

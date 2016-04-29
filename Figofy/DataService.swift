@@ -68,11 +68,11 @@ class DataService {
         
         
         fishRef.observeEventType(.Value, withBlock: { snapshot in
-        
+            
             if let _ = snapshot.value as? NSNull {
                 fishRef.setValue(true)
             }
-        
+            
         })
         
     }
@@ -80,25 +80,29 @@ class DataService {
         let postRef = REF_PAYMENT_REGISTER.childByAutoId()
         postRef.setValue(register)
         
+        //__________________________________posting to Seas___________________________
         let postId = postRef.key
-        let REF = REF_SEAS.childByAppendingPath(DBPaymentRegister.staticPaymentRegister.seas)
-        var paymentRef = REF.childByAppendingPath("payment").childByAppendingPath(postId)
-        //Inserting FK for seas to see payment in the future
+        let REFSEA = REF_SEAS.childByAppendingPath(DBPaymentRegister.staticPaymentRegister.seas)
+        let paymentRefSea = REFSEA.childByAppendingPath("payment").childByAppendingPath(postId)
         
-        paymentRef.observeEventType(.Value, withBlock: { snapshot in
+        paymentRefSea.observeEventType(.Value, withBlock: { snapshot in
             if let _ = snapshot.value as? NSNull {
-                paymentRef.setValue(true)
+                
+                paymentRefSea.setValue(true)
             }
         })
-        let REFUSER = REF_USERS.childByAppendingPath(DBPaymentRegister.staticPaymentRegister.user)
-        paymentRef = REFUSER.childByAppendingPath("payment").childByAppendingPath(postId)
-        paymentRef.observeEventType(.Value, withBlock: { snapshot in
-              if let _ = snapshot.value as? NSNull {
+        //__________________________________posting to User___________________________
         
-        paymentRef.setValue(true)
+        let REFUSER = REF_USERS.childByAppendingPath("facebook:\(DBPaymentRegister.staticPaymentRegister.user)")
+        let paymentRefUser = REFUSER.childByAppendingPath("payment").childByAppendingPath(postId)
+        
+        paymentRefUser.observeEventType(.Value, withBlock: { snapshot in
+            if let _ = snapshot.value as? NSNull {
+                
+                paymentRefUser.setValue(true)
             }
-        
+            
         })
-    
+        
     }
 }
