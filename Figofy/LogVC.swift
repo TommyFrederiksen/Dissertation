@@ -29,6 +29,13 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         observerForLog()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "logDetails"{
+            
+        }
+    }
+    
     
     func observerForLog()
     {
@@ -47,10 +54,7 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                 
                 }
                 
-                
                 self.logTableView.reloadData()
-                
-                
                 
             })
             
@@ -62,10 +66,14 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // MARK: return the number of rows
         return fish.count
     }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "logCell"
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as? LogCell {
@@ -82,6 +90,15 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        Fish.staticFish = fish[indexPath.row]
+        
+        performSegueWithIdentifier("logDetails", sender: fish[indexPath.row])
+        print(fish[indexPath.row].length)
+    }
+
+    
     @IBAction func BackToProfile(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
         
@@ -92,3 +109,4 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     
 }
+

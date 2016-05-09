@@ -238,7 +238,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        
     }
 }
 

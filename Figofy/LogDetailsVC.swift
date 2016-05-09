@@ -28,4 +28,21 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        noteTextField.text = Fish.staticFish.note
+        agnTextField.text = "\(Fish.staticFish.bait)"
+        metodeTextField.text = Fish.staticFish.method
+        længdeTextField.text = "\(Fish.staticFish.length)"
+        vægtTextField.text = "\(Fish.staticFish.weight)"
+        artTextField.text = Fish.staticFish.species
+        //addImgUIImage.image = Fish.staticFish.imageStr
+    }
+    
+    
+    @IBAction func BackToProfile(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
 }

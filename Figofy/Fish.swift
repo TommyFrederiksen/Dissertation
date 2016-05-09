@@ -12,6 +12,8 @@ import CoreLocation
 
 class Fish {
     
+    static var staticFish = Fish()
+    
     enum Species: Int, CustomStringConvertible {
         case Laks = 0, Ørred,Guldørred,Havørred,Regnbueørred,Bækørred, GuldLaks, Torsk, Hvilling, Kuller, Lange,Stør,Aborre,Gede,Skalle
         
@@ -148,6 +150,8 @@ class Fish {
           _cougntBy = newValue
         }
         
+    }
+    init(){
     }
     
     init(postKey: String) {

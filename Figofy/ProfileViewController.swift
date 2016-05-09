@@ -36,10 +36,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
             print("Initiated Queue: \(QOS_CLASS_USER_INITIATED.rawValue)")
         }
         
-        
-      
-        
-
 
     }
     func scrollToFirstRow() {
@@ -97,8 +93,6 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         
     }
     
-    
-        
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
