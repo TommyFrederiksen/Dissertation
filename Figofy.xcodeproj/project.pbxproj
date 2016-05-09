@@ -69,6 +69,7 @@
 		65D98CEC1C9023A900D54BB9 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CEB1C9023A900D54BB9 /* FriendsCell.swift */; };
 		65D98CEE1C9023E300D54BB9 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CED1C9023E300D54BB9 /* FriendsVC.swift */; };
 		F98634459CF7905C5013FABE /* Pods in Frameworks */ = {isa = PBXBuildFile; fileRef = B10CAFE5CCEBA3FE110E428F /* Pods */; };
+		FF30350A1CE0C832002F728E /* StringDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3035091CE0C832002F728E /* StringDecode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		6B3D4BDC1C3533F8ED3B5DA2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10CAFE5CCEBA3FE110E428F /* Pods */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods; path = ../../../Pods; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D388C7DAA3D5DB5B97783B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FF3035091CE0C832002F728E /* StringDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDecode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +287,7 @@
 				189E3CFB1C7BC05100AFE975 /* Constants.swift */,
 				188D09BF1C92E4970021FBC8 /* NSDateExtensions.swift */,
 				18869D181CA133C200635951 /* NSTimeIntervalExtensions.swift */,
+				FF3035091CE0C832002F728E /* StringDecode.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				18869D1B1CA13C8300635951 /* MPPayment.swift in Sources */,
 				18AFDA031C7472C300F2616E /* AlertView.swift in Sources */,
 				65D98CE81C8EC0AF00D54BB9 /* LogVC.swift in Sources */,
+				FF30350A1CE0C832002F728E /* StringDecode.swift in Sources */,
 				651018171C50DB4C00B7FECC /* LakeInformationVC.swift in Sources */,
 				651018131C50D93100B7FECC /* ProfileViewController.swift in Sources */,
 				184696CA1C5F61710095D64B /* SeaAnnotation.swift in Sources */,

@@ -18,3 +18,4 @@ let SEGUE_PAYMENT = "payment"
 
 //Status Codes
 let STATUS_ACCOUNT_NONEXIST = -8
+

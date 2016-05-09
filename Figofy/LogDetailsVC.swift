@@ -23,7 +23,6 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
         super.viewDidLoad()
 //        imagePicker = UIImagePickerController()
 //        imagePicker.delegate = self
-        addImgUIImage.sizeToFit()
 
         
     }
@@ -36,7 +35,12 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
         længdeTextField.text = "\(Fish.staticFish.length)"
         vægtTextField.text = "\(Fish.staticFish.weight)"
         artTextField.text = Fish.staticFish.species
-        //addImgUIImage.image = Fish.staticFish.imageStr
+        
+        let imgStr = Fish.staticFish.imageStr
+        
+        addImgUIImage.image = decodeBase64StringToImage(imgStr)
+
+        
     }
     
     
