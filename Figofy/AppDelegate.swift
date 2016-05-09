@@ -103,9 +103,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 "product" : DBPaymentRegister.staticPaymentRegister.product,
                 "transaction_id" : DBPaymentRegister.staticPaymentRegister.transactionId
             ]
+//            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
+//                DataService.dataService.createFirebasePaymentRegister(newPaymentRegister)
+//                
+//            }
+//            
             
             DataService.dataService.createFirebasePaymentRegister(newPaymentRegister)
-            
             self.lakeInformation?.updateAndPasInfoToClockVC()
             
             

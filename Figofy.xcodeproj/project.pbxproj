@@ -61,6 +61,7 @@
 		655044CF1C64D24700D79B89 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655044CE1C64D24700D79B89 /* Clock.swift */; };
 		6550AD4C1C9C30380020A415 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6550AD4B1C9C30380020A415 /* LogCell.swift */; };
 		657368CE1C635E3900E1367D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657368CD1C635E3900E1367D /* EventTableViewCell.swift */; };
+		658B315E1CE09FB8001BCEA3 /* LogDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B315D1CE09FB8001BCEA3 /* LogDetailsVC.swift */; };
 		659501001C6DD94C0067ED1A /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659500FF1C6DD94C0067ED1A /* Timer.swift */; };
 		65C8DFBC1C80434F0088622A /* FavoriteSeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C8DFBB1C80434F0088622A /* FavoriteSeaCell.swift */; };
 		65D98CE81C8EC0AF00D54BB9 /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D98CE71C8EC0AF00D54BB9 /* LogVC.swift */; };
@@ -149,6 +150,7 @@
 		655044CE1C64D24700D79B89 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
 		6550AD4B1C9C30380020A415 /* LogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		657368CD1C635E3900E1367D /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventTableViewCell.swift; path = ../EventTableViewCell.swift; sourceTree = "<group>"; };
+		658B315D1CE09FB8001BCEA3 /* LogDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogDetailsVC.swift; sourceTree = "<group>"; };
 		659500FF1C6DD94C0067ED1A /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		65C8DFBB1C80434F0088622A /* FavoriteSeaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteSeaCell.swift; sourceTree = "<group>"; };
 		65D98CE71C8EC0AF00D54BB9 /* LogVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				18E642AF1C80A87F00155CCC /* RegisterFishVC.swift */,
 				65D98CE71C8EC0AF00D54BB9 /* LogVC.swift */,
 				65D98CED1C9023E300D54BB9 /* FriendsVC.swift */,
+				658B315D1CE09FB8001BCEA3 /* LogDetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				65D98CEE1C9023E300D54BB9 /* FriendsVC.swift in Sources */,
 				18CCAA981C60D5B700C7D5E8 /* CreateSeaVC.swift in Sources */,
 				18ACE6451C7BBDAE0092BC95 /* DataService.swift in Sources */,
+				658B315E1CE09FB8001BCEA3 /* LogDetailsVC.swift in Sources */,
 				655044CB1C637C2900D79B89 /* Event.swift in Sources */,
 				18E675801C58B6850046B259 /* TextFieldDesign.swift in Sources */,
 				659501001C6DD94C0067ED1A /* Timer.swift in Sources */,

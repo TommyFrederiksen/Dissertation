@@ -29,13 +29,15 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         profileImageView.clipsToBounds = true
         feedTableView.delegate = self
         feedTableView.dataSource = self
-        observerForFeed()
         currentUser()
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "Europe/Copenhagen")
-        formatter.dateFormat = "E, dd MMM yyyy HH:mm:ss Z"
-        let date = formatter.dateFromString("Thu, 04 Sep 2014 10:50:12 0000") as? NSDate!
-        print(date)
+        // setting up Queue for Async tread Loading will continue on its own
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
+            self.observerForFeed()
+            print("Initiated Queue: \(QOS_CLASS_USER_INITIATED.rawValue)")
+        }
+        
+        
+      
         
 
 
@@ -56,7 +58,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
                 self.nameLbl.text = "\(self.user.userFirstName)"
                 DBPaymentRegister.staticPaymentRegister.name = "\(self.user.userFirstName) \(self.user.userLastName)"
                 DBPaymentRegister.staticPaymentRegister.user = self.user.facebookId
-                print(DBPaymentRegister.staticPaymentRegister.user)
+                print("Current User have run \(NSDate.init())")
 
             }
         })
@@ -87,6 +89,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
                 }
                 self.fish = self.fish.reverse()
                 self.feedTableView.reloadData()
+                print("observeFeed have run \(NSDate.init())")
                 
 
         })
