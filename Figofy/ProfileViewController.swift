@@ -92,6 +92,33 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         
         
     }
+//    @IBAction func createManyPayments(sender: AnyObject) {
+//        for i in 1...2{
+//            DBPaymentRegister.staticPaymentRegister.seas = "3948dfgiue98"
+//            DBPaymentRegister.staticPaymentRegister.boughtTimeStart = "\(NSDate.init())"
+//            DBPaymentRegister.staticPaymentRegister.orderId = "hunndi"
+//            DBPaymentRegister.staticPaymentRegister.product = "test"
+//            DBPaymentRegister.staticPaymentRegister.transactionId = "666"
+//            let newPaymentRegister: Dictionary<String, AnyObject> = [
+//                "time_creted" : FirebaseServerValue.timestamp(),
+//                "amount" : i,
+//                "seas" : DBPaymentRegister.staticPaymentRegister.seas,
+//                "user" : DBPaymentRegister.staticPaymentRegister.user,
+//                "bought_time_start" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeStart)",
+//                //"bought_time_end" : "\(DBPaymentRegister.staticPaymentRegister.boughtTimeEnd)",
+//                "order_id" : DBPaymentRegister.staticPaymentRegister.orderId,
+//                "name" : DBPaymentRegister.staticPaymentRegister.name,
+//                "product" : DBPaymentRegister.staticPaymentRegister.product,
+//                "transaction_id" : DBPaymentRegister.staticPaymentRegister.transactionId
+//            ]
+//            dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
+//                DataService.dataService.createFirebasePaymentRegister(newPaymentRegister)
+//                
+//            }
+//            
+//            
+//        }
+//    }
     
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

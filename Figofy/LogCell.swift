@@ -26,7 +26,8 @@ class LogCell: UITableViewCell {
     func configureCell(fish: Fish)
     {
         
-        datoLabel.text = NSDate.convertToString(time: fish.timeCatched, style: .MediumStyle)
+     
+        datoLabel.text = NSDate.convertToString(time: fish.timeCatchedNSTimeInterval, style: .FullStyle)
         let img = decodeBase64StringToImage(fish.imageStr)
         logImageView.image = img
         beskrivelseLabel.text = "Art: \(fish.species)"

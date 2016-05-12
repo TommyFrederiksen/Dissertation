@@ -93,7 +93,8 @@ class Fish {
     private var _bait: String!
     private var _method: String!
     private var _note: String!
-    private var _timeCatched: NSTimeInterval!
+    private var _timeCatched: Double!
+    private var _timeCreatedNSTimeInterval: NSTimeInterval!
     private var _latitude: CLLocationDegrees?
     private var _longitude: CLLocationDegrees?
     private var _fishRef: Firebase!
@@ -127,8 +128,11 @@ class Fish {
         return _note
     }
     
-    var timeCatched: NSDate {
-        return NSDate.convertFirebaseTimestampToDate(stamp: _timeCatched)
+    var timeCatched: Double {
+        return _timeCatched
+    }
+    var timeCatchedNSTimeInterval: NSDate {
+        return NSDate.convertFirebaseTimestampToDate(stamp: _timeCreatedNSTimeInterval)
     }
     
     var latitude: CLLocationDegrees? {
@@ -199,8 +203,11 @@ class Fish {
                 self._note = note
             }
             
-            if let time = catched["time_catched"] as? NSTimeInterval {
+            if let time = catched["time_catched"] as? Double {
                 self._timeCatched = time
+            }
+            if let time_Catched = catched["time_catched"] as? NSTimeInterval{
+                self._timeCreatedNSTimeInterval = time_Catched
             }
             
             if let latitude = catched["latitude"] as? CLLocationDegrees {

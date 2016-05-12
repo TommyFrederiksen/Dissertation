@@ -46,6 +46,7 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             //print("\(fishIds.key)")
             DataService.dataService.REF_FISH.childByAppendingPath(fishIds.key).observeSingleEventOfType(.Value, withBlock: {
                 fishSnaps in
+                print(fishSnaps.children)
                 
                 if let fishDict = fishSnaps.value as? Dictionary<String, AnyObject> {
                     

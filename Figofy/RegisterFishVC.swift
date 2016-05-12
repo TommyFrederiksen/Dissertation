@@ -40,6 +40,7 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     var weightArray: [[Int]]?
     var valuesArray199: [Int] = []
     var valuesArray10: [Int] = []
+    var valuesArray999: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker = UIImagePickerController()
@@ -56,8 +57,10 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view.
         valuesArray199 += 0..<199
         valuesArray10 += 0..<10
-        lengthArray = [valuesArray10,valuesArray10,valuesArray10]
+        valuesArray999 += 0..<999
+        lengthArray = [valuesArray999]
         weightArray = [valuesArray199,valuesArray10]
+        
         
         fishImg.layer.cornerRadius = 2.5
         uploadButton.layer.cornerRadius = 5
@@ -205,10 +208,10 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var lengthBtn: UIButton!
     @IBAction func lengthTapped(sender: UIButton) {
         //Length stuff
-        let action = ActionSheetMultipleStringPicker(title: "Vælg længde", rows: lengthArray, initialSelection: [0,0,0] , doneBlock: {
+        let action = ActionSheetMultipleStringPicker(title: "Vælg længde i cm", rows: lengthArray, initialSelection: [0] , doneBlock: {
             picker, values, indexes in
             
-                self.chooseLength.setTitle("\(values[0]).\(values[1])\(values[2])", forState: .Normal)
+                self.chooseLength.setTitle("\(values[0])", forState: .Normal)
             return
             }, cancelBlock: { ActionMultipleStringCancelBlock in
                 self.chooseLength.setTitle("Tryk for Længde", forState: .Normal)

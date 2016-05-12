@@ -8,7 +8,8 @@
 
 import Foundation
 
-func decodeBase64StringToImage(strEncodedData: String?) -> UIImage {
+func decodeBase64StringToImage(strEncodedData: String?) -> UIImage
+{
     if let data = strEncodedData{
         let image = NSData(base64EncodedString: data, options: .IgnoreUnknownCharacters)
         return UIImage(data: image!)!
@@ -18,4 +19,8 @@ func decodeBase64StringToImage(strEncodedData: String?) -> UIImage {
         return UIImage(named: "Figofy_app_trans")!
     }
     
+}
+func encodeToBase64String(image: UIImage) -> String
+{
+    return (UIImageJPEGRepresentation(image, 0.2)?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength))!
 }

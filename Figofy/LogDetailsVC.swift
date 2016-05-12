@@ -49,4 +49,28 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
         
     }
     
+    @IBAction func saveDetails(sender: AnyObject) {
+        let img = encodeToBase64String(self.addImgUIImage.image!)
+        let m = Float(længdeTextField.text!)
+        let kg = Float(vægtTextField.text!)
+        let time = Fish.staticFish.timeCatched
+        
+        let newFish: Dictionary<String, AnyObject> = [
+            "imageStr" : img,
+            "length" : m!,
+            "species" : artTextField.text!,
+            "weight" : kg!,
+            "catched" : [
+                "bait" : agnTextField.text!,
+                "method" : metodeTextField.text!,
+                "note" : noteTextField.text!,
+                "time_catched" : time
+            ]
+        ]
+        
+       let fishRef = DataService.dataService.REF_FISH.childByAppendingPath(Fish.staticFish.fishPostKey)
+        fishRef.updateChildValues(newFish)
+    }
+    
+   
 }
