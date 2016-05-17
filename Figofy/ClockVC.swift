@@ -34,7 +34,7 @@ class ClockVC: UIViewController {
         print("VIEWDIDLOAD")
         timeLabel.text = ""
         countdownLabel.text = ""
-        getPaymentFromFirebase()
+        //getPaymentFromFirebase()
         
         currentTime = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ClockVC.updateCurrentTime), userInfo: nil, repeats: true)
         

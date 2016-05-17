@@ -73,6 +73,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let accessToken = FBSDKAccessToken.currentAccessToken()
                 
                 
+                
                 if accessToken.declinedPermissions.count == 0 {
                     print("No Permissions were declined")
                     // TODO: Some
@@ -200,7 +201,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         figofyLogo.hidden = false
         
         opretSV.hidden = true
-        buttomBarButton.setTitle("Ikke en del af figofy? Opret dig her", forState: UIControlState.Normal)
+        buttomBarButton.setTitle("Ikke en del af figofy? Opret dig her (Ikke i beta)", forState: UIControlState.Normal)
         createFirstName.text = ""
         createEmail.text = ""
         createPhone.text = ""

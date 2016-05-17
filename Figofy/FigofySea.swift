@@ -11,6 +11,8 @@ import CoreLocation
 
 class FigofySea {
     
+    static var staticMerchantId = ""
+    
     private var _seaId: String!
     private var _seaPostKey: String!
     private var _seaName: String!
@@ -28,6 +30,7 @@ class FigofySea {
     private var _seaPrices: Dictionary<String,Int>?
     private var _seaCoverImgUrl: String?
     private var _seaProfileImgUrl: String?
+    private var _merchantId: String!
     
     var seaId: String {
         return _seaId
@@ -96,6 +99,10 @@ class FigofySea {
         return _seaProfileImgUrl
     }
     
+    var merchantId: String {
+        return _merchantId
+    }
+    
     init(name: String, streetName: String, streetNumber: Int, zipCode: Int, city: String) {
         self._seaName = name
         self._seaStreetName = streetName
@@ -134,6 +141,9 @@ class FigofySea {
         
         if let desc = dictionary["description"] as? String {
             self._seaDescription = desc
+        }
+        if let merc = dictionary["merchant_id"] as? String{
+            self._merchantId = merc
         }
         
         if let address = dictionary["address"] as? Dictionary<String, AnyObject> {

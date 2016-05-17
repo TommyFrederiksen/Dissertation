@@ -29,11 +29,15 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         profileImageView.clipsToBounds = true
         feedTableView.delegate = self
         feedTableView.dataSource = self
-        currentUser()
+        
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
+            self.currentUser()
+        }
+        
         // setting up Queue for Async tread Loading will continue on its own
         dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
             self.observerForFeed()
-            print("Initiated Queue: \(QOS_CLASS_USER_INITIATED.rawValue)")
+            
         }
         
 

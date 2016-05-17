@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerViewDelegate{
+class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerViewDelegate,UITextFieldDelegate{
     
     @IBOutlet weak var vælgSøTextField: UITextField!
     @IBOutlet weak var noteTextField: UITextField!
@@ -19,10 +19,20 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
     @IBOutlet weak var addImgUIImage: UIImageView!
     
     var imagePicker: UIImagePickerController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        imagePicker = UIImagePickerController()
-//        imagePicker.delegate = self
+
+        self.længdeTextField.delegate = self
+        self.vælgSøTextField.delegate = self
+        self.noteTextField.delegate = self
+        self.agnTextField.delegate = self
+        self.vægtTextField.delegate = self
+        self.artTextField.delegate = self
+        self.længdeTextField.keyboardType = UIKeyboardType.DecimalPad
+        self.vægtTextField.keyboardType = UIKeyboardType.DecimalPad
+        
+        
 
         
     }
@@ -70,6 +80,19 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
         
        let fishRef = DataService.dataService.REF_FISH.childByAppendingPath(Fish.staticFish.fishPostKey)
         fishRef.updateChildValues(newFish)
+    }
+    
+    // MARK: Delegate Methods
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, withEvent: event)
+        
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
    
