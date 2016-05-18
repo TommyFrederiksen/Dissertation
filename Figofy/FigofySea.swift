@@ -31,9 +31,15 @@ class FigofySea {
     private var _seaCoverImgUrl: String?
     private var _seaProfileImgUrl: String?
     private var _merchantId: String!
+    private var _seaImg: String!
+
     
     var seaId: String {
         return _seaId
+    }
+    
+    var seaImg: String {
+        return _seaImg
     }
     
     var seaName: String {
@@ -145,6 +151,10 @@ class FigofySea {
         if let merc = dictionary["merchant_id"] as? String{
             self._merchantId = merc
         }
+        if let img = dictionary["sea_img"] as? String{
+            self._seaImg = img
+        }
+        
         
         if let address = dictionary["address"] as? Dictionary<String, AnyObject> {
             if let streetName = address["street"] as? String {

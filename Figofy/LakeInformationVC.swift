@@ -50,6 +50,7 @@ class LakeInformationVC: UIViewController, UITableViewDelegate, UITableViewDataS
                 prices.append(value)
             }
         }
+        seaImg.image = decodeBase64StringToImage("\(sea.seaImg)")
         
         
         

@@ -68,7 +68,7 @@ class SeaListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("FigofySeaCell") as? FigofySeaCell {
             let sea = figofySeas[indexPath.row]
-            print(sea.fullAddress)
+            //print(sea.fullAddress)
             cell.configureCell(sea)
             return cell
         } else {
