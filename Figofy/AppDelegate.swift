@@ -22,11 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         
-        
+       // var MerchantID = FigofySea.staticMerchantId
         //TESTING
         //MobilePayManager.sharedInstance().setupWithMerchantId("APPDK0000000000", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
         //ACTUAL
-       MobilePayManager.sharedInstance().setupWithMerchantId(FigofySea.staticMerchantId, merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
+       MobilePayManager.sharedInstance().setupWithMerchantId("", merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
         
         
         //facebook Check for log in

@@ -88,6 +88,8 @@ class SeaListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         FigofySea.staticMerchantId = sea.merchantId
         print("\(FigofySea.staticMerchantId)")
         print(DBPaymentRegister.staticPaymentRegister.seas)
+         MobilePayManager.sharedInstance().setupWithMerchantId(FigofySea.staticMerchantId, merchantUrlScheme: "figofy", timeoutSeconds: 30, returnSeconds: 1, captureType: .Capture, country: .Denmark)
+        
         performSegueWithIdentifier("LakeInformationVC", sender: sea)
     }
     

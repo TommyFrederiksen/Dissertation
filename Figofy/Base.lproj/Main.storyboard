@@ -333,7 +333,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VC-KZ-leA">
                                         <rect key="frame" x="0.0" y="5" width="600" height="30"/>
                                         <color key="backgroundColor" red="0.098039215690000001" green="0.1058823529" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Ikke en del af figofy? Opret dig her">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -1859,7 +1859,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Art" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gwi-Hg-0cp">
                                                 <rect key="frame" x="100" y="0.0" width="460" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1878,7 +1878,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vægt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wvb-96-lxA">
                                                 <rect key="frame" x="100" y="0.0" width="460" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1897,7 +1897,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Længde" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfS-es-KCZ">
                                                 <rect key="frame" x="100" y="0.0" width="460" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2462,12 +2462,12 @@
         <image name="timeIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E4H-FE-siE"/>
         <segue reference="ZEs-on-qRF"/>
-        <segue reference="9ch-Nb-GuZ"/>
-        <segue reference="i3I-jW-1BC"/>
-        <segue reference="7F1-4m-2js"/>
-        <segue reference="cRP-wS-EYa"/>
         <segue reference="fvd-uX-bPl"/>
+        <segue reference="cRP-wS-EYa"/>
+        <segue reference="i3I-jW-1BC"/>
+        <segue reference="9ch-Nb-GuZ"/>
+        <segue reference="7F1-4m-2js"/>
+        <segue reference="ar3-Dq-Xt8"/>
     </inferredMetricsTieBreakers>
 </document>
