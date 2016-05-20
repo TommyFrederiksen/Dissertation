@@ -30,9 +30,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
-        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){
-            self.currentUser()
-        }
+         currentUser()
         
         // setting up Queue for Async tread Loading will continue on its own
         dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)){

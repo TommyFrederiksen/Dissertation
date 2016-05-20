@@ -9,6 +9,7 @@
 import Foundation
 class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerViewDelegate,UITextFieldDelegate{
     
+    @IBOutlet var mainView: UIView!
     @IBOutlet weak var vælgSøTextField: UITextField!
     @IBOutlet weak var noteTextField: UITextField!
     @IBOutlet weak var agnTextField: UITextField!
@@ -22,6 +23,10 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogDetailsVC.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LogDetailsVC.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
 
         self.længdeTextField.delegate = self
         self.vælgSøTextField.delegate = self
@@ -31,9 +36,6 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
         self.artTextField.delegate = self
         self.længdeTextField.keyboardType = UIKeyboardType.DecimalPad
         self.vægtTextField.keyboardType = UIKeyboardType.DecimalPad
-        
-        
-
         
     }
     
@@ -53,6 +55,12 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
         
     }
     
+    func keyboardWillShow(sender: NSNotification){
+        self.mainView.frame.origin.y = -150
+    }
+    func keyboardWillHide(sender: NSNotification){
+        self.mainView.frame.origin.y = 0
+    }
     
     @IBAction func BackToProfile(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -61,15 +69,13 @@ class LogDetailsVC:  UIViewController, UIImagePickerControllerDelegate,UIPickerV
     
     @IBAction func saveDetails(sender: AnyObject) {
         let img = encodeToBase64String(self.addImgUIImage.image!)
-        let m = Float(længdeTextField.text!)
-        let kg = Float(vægtTextField.text!)
         let time = Fish.staticFish.timeCatched
         
         let newFish: Dictionary<String, AnyObject> = [
             "imageStr" : img,
-            "length" : m!,
+            "length" : længdeTextField.text!,
             "species" : artTextField.text!,
-            "weight" : kg!,
+            "weight" : vægtTextField.text!,
             "catched" : [
                 "bait" : agnTextField.text!,
                 "method" : metodeTextField.text!,

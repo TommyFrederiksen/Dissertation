@@ -253,8 +253,8 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
         print(chooseWeight.currentTitle)
         print(chooseLength.currentTitle)
         let kind: String = chooseSpecies.currentTitle!
-        let kg = Float(chooseWeight.currentTitle!)!
-        let m = Float(chooseLength.currentTitle!)!
+        let kg = chooseWeight.currentTitle!
+        let m = chooseLength.currentTitle!
         let bait = writeBait.text!
         let method = chooseMethod.currentTitle!
         let note = writeNote.text!

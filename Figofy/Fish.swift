@@ -87,8 +87,8 @@ class Fish {
     
     private var _fishPostKey: String!
     private var _imageStr: String?
-    private var _length: Float!
-    private var _weight: Double!
+    private var _length: String!
+    private var _weight: String!
     private var _species: String!
     private var _bait: String!
     private var _method: String!
@@ -104,11 +104,11 @@ class Fish {
         return _imageStr
     }
     
-    var length: Float {
+    var length: String {
         return _length
     }
     
-    var weight: Double {
+    var weight: String {
         return _weight
     }
     
@@ -162,7 +162,7 @@ class Fish {
         self._fishPostKey = postKey
     }
     
-    init(imageStr: String, length: Float, weight: Double, species: String) {
+    init(imageStr: String, length: String, weight: String, species: String) {
         self._imageStr = imageStr
         self._length = length
         self._weight = weight
@@ -177,7 +177,7 @@ class Fish {
             self._imageStr = imgStr
         }
         
-        if let length = dictionary["length"] as? Float {
+        if let length = dictionary["length"] as? String {
             self._length = length
         }
         
@@ -185,7 +185,7 @@ class Fish {
             self._species = kind
         }
         
-        if let weight = dictionary["weight"] as? Double {
+        if let weight = dictionary["weight"] as? String {
             self._weight = weight
         }
         

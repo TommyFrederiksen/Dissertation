@@ -26,7 +26,7 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         logTableView.delegate = self
         logTableView.dataSource = self
-        observerForLog()
+        //observerForLog()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -34,6 +34,9 @@ class LogVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         if segue.identifier == "logDetails"{
             
         }
+    }
+    override func viewDidAppear(animated: Bool) {
+        observerForLog()
     }
     
     
