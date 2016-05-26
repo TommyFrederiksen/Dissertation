@@ -48,6 +48,7 @@
 		651018171C50DB4C00B7FECC /* LakeInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018161C50DB4C00B7FECC /* LakeInformationVC.swift */; };
 		651018191C50DBDC00B7FECC /* MobilePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651018181C50DBDC00B7FECC /* MobilePayViewController.swift */; };
 		652CC3D31CCDEBA100BEBE42 /* DBPaymentRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652CC3D21CCDEBA100BEBE42 /* DBPaymentRegister.swift */; };
+		6536B0C31CF705B700869546 /* FiendFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6536B0C21CF705B700869546 /* FiendFriendVC.swift */; };
 		654A27101C350EA6008AA4EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A270F1C350EA6008AA4EB /* AppDelegate.swift */; };
 		654A27121C350EA6008AA4EB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654A27111C350EA6008AA4EB /* LoginViewController.swift */; };
 		654A27151C350EA6008AA4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654A27131C350EA6008AA4EB /* Main.storyboard */; };
@@ -132,6 +133,7 @@
 		651018161C50DB4C00B7FECC /* LakeInformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LakeInformationVC.swift; sourceTree = "<group>"; };
 		651018181C50DBDC00B7FECC /* MobilePayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePayViewController.swift; sourceTree = "<group>"; };
 		652CC3D21CCDEBA100BEBE42 /* DBPaymentRegister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPaymentRegister.swift; sourceTree = "<group>"; };
+		6536B0C21CF705B700869546 /* FiendFriendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiendFriendVC.swift; sourceTree = "<group>"; };
 		654A270C1C350EA6008AA4EB /* Figofy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Figofy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		654A270F1C350EA6008AA4EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		654A27111C350EA6008AA4EB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				65D98CE71C8EC0AF00D54BB9 /* LogVC.swift */,
 				65D98CED1C9023E300D54BB9 /* FriendsVC.swift */,
 				658B315D1CE09FB8001BCEA3 /* LogDetailsVC.swift */,
+				6536B0C21CF705B700869546 /* FiendFriendVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -258,10 +261,8 @@
 				659500FF1C6DD94C0067ED1A /* Timer.swift */,
 				181E55741C7DABE7007E9EF3 /* FigofySea.swift */,
 				181E55761C7DDCFD007E9EF3 /* FigofyUser.swift */,
-				65C8DFBB1C80434F0088622A /* FavoriteSeaCell.swift */,
 				189DE0CB1C86E89A00EA2977 /* Fish.swift */,
 				189DE0CD1C86FA1400EA2977 /* FishCatch.swift */,
-				65D98CEB1C9023A900D54BB9 /* FriendsCell.swift */,
 				18869D1A1CA13C8300635951 /* MPPayment.swift */,
 				652CC3D21CCDEBA100BEBE42 /* DBPaymentRegister.swift */,
 			);
@@ -274,7 +275,9 @@
 				65D98CE91C8ED25700D54BB9 /* FeedCell.swift */,
 				184696EF1C5F9A000095D64B /* CustomFigofyAnnotation.swift */,
 				1846984B1C60BE8E0095D64B /* SeaCell.swift */,
+				65C8DFBB1C80434F0088622A /* FavoriteSeaCell.swift */,
 				18CCAA971C60D5B700C7D5E8 /* CreateSeaVC.xib */,
+				65D98CEB1C9023A900D54BB9 /* FriendsCell.swift */,
 				18AFDA021C7472C300F2616E /* AlertView.swift */,
 				6550AD4B1C9C30380020A415 /* LogCell.swift */,
 			);
@@ -595,6 +598,7 @@
 				181E55771C7DDCFD007E9EF3 /* FigofyUser.swift in Sources */,
 				184696F01C5F9A000095D64B /* CustomFigofyAnnotation.swift in Sources */,
 				184698461C60A34B0095D64B /* Figofy.xcdatamodeld in Sources */,
+				6536B0C31CF705B700869546 /* FiendFriendVC.swift in Sources */,
 				654A27101C350EA6008AA4EB /* AppDelegate.swift in Sources */,
 				18E675821C58B76F0046B259 /* TextFieldEffects.swift in Sources */,
 				188D09C01C92E4970021FBC8 /* NSDateExtensions.swift in Sources */,

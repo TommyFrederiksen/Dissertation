@@ -8,19 +8,20 @@
 
 import UIKit
 
-class FriendsCell: UICollectionViewCell {
- 
-        @IBOutlet weak var mainImg: UIImageView!
-        @IBOutlet weak var mainLbl: UILabel!
+class FriendsCell: UITableViewCell {
+    
+    @IBOutlet weak var _fullName: UILabel!
+    @IBOutlet weak var _email: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
-        override func awakeFromNib() {
-            super.awakeFromNib()
-            
-        }
-        
-        func configureCell(image: UIImage, text: String){
-            mainImg.image = image
-            mainLbl.text = text
-        }
+    }
+    
+    func configureCell(user: FigofyUser){
+        _fullName.text = "\(user.userFirstName) \(user.userLastName)"
+        _email.text = user.email
+    }
     
 }

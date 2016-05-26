@@ -34,7 +34,7 @@ class RegisterFishVC: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var speciesArray = ["Laks","GuldLaks","Guldørred","Havørred","Regnbueørred","Bækørred","Stør","Torsk","Hvilling","Lange","Aborre","Gede","Skalle","Angiv Selv"]
     
-    var methodArray = ["Spinne","Mede","Flue","Trolle","Bombarda"]
+    var methodArray = ["Spinne","Mede","Flue","Trolle","Bombarda","Andet se noter"]
     
     var lengthArray: [[Int]]?
     var weightArray: [[Int]]?

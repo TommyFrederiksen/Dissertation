@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import FBSDKCoreKit
 
 class FriendsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     @IBOutlet weak var friendsCollectionView: UICollectionView!
+    var anyobject = [NSObject: AnyObject]()
+    var dict: NSDictionary!
+    
     
     var friendsImg = ["man1","man2","man3","man4","female1","female2","man8","man5","man6","man7"]
     var friendsName = ["Søren","Kim","Lasse","Jonas","Vibeke","Lullu","Ib","Gerner","Hans","Ole"]
@@ -20,12 +24,12 @@ class FriendsVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
         super.viewDidLoad()
         friendsCollectionView.delegate = self
         friendsCollectionView.dataSource = self
-        
+        getfriends()
         
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-
+        
         //let img = UIImage(named: friendsImg[indexPath.row])
         if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("FriendsCell", forIndexPath: indexPath) as? UICollectionViewCell
         {
@@ -37,7 +41,32 @@ class FriendsVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
             return UICollectionViewCell()
         }
         
+        
     }
+    
+    func getfriends(){
+        
+        let parameters = ["fields": "first_name,last_name,email,picture.type(large)"]
+        
+        FBSDKGraphRequest(graphPath: "/me/friends", parameters: parameters ).startWithCompletionHandler{ (connection, result, error) -> Void in
+            if error != nil{
+                print(error)
+                return
+            }
+//            print(result)
+//            var friends = [Friends]()
+//            for friendDict in result["data"] as! [NSDictionary]{
+//                let name = friendDict["name"] as? String
+//                if let picture = friendDict["picture"]?["data"]?!["url"] as? String{
+//                    let friend = Friend(name: name!, image: picture)
+//                    friends.append(friend)
+//                }
+//            }
+            
+        }
+    }
+
+    
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -49,6 +78,6 @@ class FriendsVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
     @IBAction func backToProfile(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     
 }

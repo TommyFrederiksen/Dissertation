@@ -30,7 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Variables
     let layer = CAGradientLayer()
-    let fbPermissions = ["email", "user_location", "user_birthday"]
+    let fbPermissions = ["email","user_location","user_birthday"]
     var fbParameters = Dictionary<NSObject, AnyObject>()
     // MARK: View Methods
     override func viewDidLoad()
@@ -74,6 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 
                 
+                
                 if accessToken.declinedPermissions.count == 0 {
                     print("No Permissions were declined")
                     // TODO: Some
@@ -110,9 +111,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 if let userInfo = result as? [String:AnyObject] {
                                     
                                     let currentUser = FigofyUser(postKey: authData.uid, dictionary: userInfo)
-                                    DataService.dataService.createFirebaseUser(authData.uid, user: userInfo)
-                                    //print("......\(currentUser.facebookId)")
                                     
+                                    DataService.dataService.createFirebaseUser(authData.uid, user: userInfo)
+                                    print("......\(currentUser.facebookId)")
                                     //Navigate through
                                     
                                     self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: currentUser)

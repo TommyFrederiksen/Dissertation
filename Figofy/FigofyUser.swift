@@ -27,6 +27,12 @@ class FigofyUser {
     private var _gender: String!
     private var _birthday: String!//TODO
     private var _dateCreated: NSTimeInterval!
+    private var _photo: UIImage!
+    private var _friends_id: String!
+    
+    var photo: UIImage {
+        return _photo
+    }
     
     var facebookId: String {
         return _facebookId
@@ -59,6 +65,9 @@ class FigofyUser {
     var userMemberLength: NSDate {
         return NSDate.convertFirebaseTimestampToDate(stamp: _dateCreated)
     }
+    var friends_id: String {
+        return _friends_id
+    }
     
     
     init(facebookId: String, firstname: String, lastname: String, gender: String, birthday: String) {
@@ -67,6 +76,7 @@ class FigofyUser {
         self._lastName = lastname
         self._gender = gender
         self._birthday = birthday
+        
     }
     
     
@@ -101,7 +111,9 @@ class FigofyUser {
             print("Gender: \(gender)")
             self._gender = gender
         }
-        
+        if let photo = dictionary["user_photos"] as? UIImage {
+            self._photo = photo
+        }
         if let location = dictionary["location"] as? Dictionary<String, AnyObject> {
             print("Location: \(location)")
         }
@@ -109,6 +121,13 @@ class FigofyUser {
         if let memberSince = dictionary["member_since"] as? NSTimeInterval {
             print("Member Since: \(memberSince)")
             self._dateCreated = memberSince
+        }
+        if let friends = dictionary["friends"] as? Dictionary<String, AnyObject> {
+            if let data = friends["data"] as? Dictionary<String, AnyObject> {
+                if let friends_id = data["id"] as? String {
+                    self._friends_id = friends_id
+                }
+            }
         }
         
     }

@@ -9,6 +9,7 @@
 import UIKit
 
 import Firebase
+import FBSDKCoreKit
 
 
 class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
@@ -21,6 +22,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
     var fish = [Fish]()
     
     
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         profileImageView.clipsToBounds = true
         feedTableView.delegate = self
         feedTableView.dataSource = self
+        
         
          currentUser()
         
@@ -94,6 +97,7 @@ class ProfileViewController: UIViewController,UITableViewDelegate, UITableViewDa
         
         
     }
+  
 //    @IBAction func createManyPayments(sender: AnyObject) {
 //        for i in 1...2{
 //            DBPaymentRegister.staticPaymentRegister.seas = "3948dfgiue98"

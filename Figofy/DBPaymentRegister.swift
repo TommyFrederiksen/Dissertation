@@ -12,6 +12,7 @@ class DBPaymentRegister{
     
     static var staticPaymentRegister = DBPaymentRegister()
     
+    
     private var _paymentPostkey: String!
     private var _amount: Int!
     private var _seas: String!
