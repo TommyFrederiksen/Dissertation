@@ -54,21 +54,11 @@ class DataService {
     
     // MARK: Post Methods
     func createFirebaseUser(uid: String, var user: Dictionary<String, AnyObject>) {
+        //'/users/33asdf12f34' if it doesnt exist, it will create it. Or if it does it will update it
         user.updateValue(FirebaseServerValue.timestamp(), forKey: "member_since")
         REF_USERS.childByAppendingPath(uid).setValue(user)
     }
-    func addRequestToUser(user: FigofyUser){
-        let postRef = REF_USERS.childByAppendingPath(user.facebookId)
-        let postId = "facebook:\(postRef.key)"
-        let REFREQ = REF_USERS.childByAppendingPath(postId)
-        let requestRefUser = REFREQ.childByAppendingPath("pending_request").childByAppendingPath(DBPaymentRegister.staticPaymentRegister.user)
-        requestRefUser.observeEventType(.Value, withBlock: { snapshot in
-            if let _ = snapshot.value as? NSNull {
-                requestRefUser.setValue(true)
-            }
-        })
-        
-    }
+    
     func createFish(fish: Dictionary<String, AnyObject>) {
         let postRef = REF_FISH.childByAutoId()
         postRef.setValue(fish)
